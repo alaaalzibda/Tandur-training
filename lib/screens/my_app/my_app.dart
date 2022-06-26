@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(AppColors.primary),
       ),
 
+      translations: Translation(),
       // we use the fallbackLocale to handel any error in language files and use the en as default language
       fallbackLocale: const Locale('en'),
       debugShowCheckedModeBanner: false,

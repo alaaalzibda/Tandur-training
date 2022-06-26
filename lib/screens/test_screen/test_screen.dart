@@ -9,7 +9,7 @@ class TestScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: CommonText(
-            text: 'Test Screen',
+            text: 'my_profile'.tr,
           ),
         ),
       ),
