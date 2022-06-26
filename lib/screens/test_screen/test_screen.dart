@@ -6,9 +6,11 @@ class TestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: CommonText(
-          text: 'Test Screen',
+      body: SingleChildScrollView(
+        child: Center(
+          child: CommonText(
+            text: 'Test Screen',
+          ),
         ),
       ),
     );
