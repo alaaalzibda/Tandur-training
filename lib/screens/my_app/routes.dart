@@ -5,4 +5,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeHome,
     page: () => const HomeBottomBar(),
   ),
+  GetPage<TestScreen>(
+    name: routeTest,
+    page: () => const TestScreen(),
+  ),
 ];

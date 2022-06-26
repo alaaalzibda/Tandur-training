@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       fallbackLocale: const Locale('en'),
       debugShowCheckedModeBanner: false,
       initialRoute:
-          Get.find<MyAppController>().userData == null ? routeHome : routeHome,
+          Get.find<MyAppController>().userData == null ? routeTest : routeHome,
       getPages: appRoutes,
     );
   }
