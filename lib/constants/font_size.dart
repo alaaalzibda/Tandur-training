@@ -1,3 +1,6 @@
+
+const String fontFamily = 'poppins';
+
 const double fontH1 = 28.0;
 const double fontH2 = 20.0;
 const double fontH3 = 16.0;
