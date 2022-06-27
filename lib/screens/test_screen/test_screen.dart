@@ -12,35 +12,36 @@ class TestScreen extends StatelessWidget {
           child: Center(
             child: Column(
               children: <Widget>[
-                SizedBox(height: DEVICE_HEIGHT * 0.1),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.1,
+                ),
                 CommonButton(
                   buttonStyle: DefaultButtonStyles().defaultSmallButton(),
-                  text: 'Login'.tr,
+                  text: 'login'.tr,
                 ),
-                SizedBox(height: DEVICE_HEIGHT * 0.02),
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.08),
-                  child: CommonButton(
-                    buttonStyle: DefaultButtonStyles().defaultButtonStyle(),
-                    text: 'Login'.tr,
-                  ),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
                 ),
-                SizedBox(height: DEVICE_HEIGHT * 0.02),
-                MyCommonButton(
-                    title: 'Login'.tr,
-                    backgroundColor: AppColors.green,
-                    fontSize: 18,
-                    borderColor: AppColors.black,
-                    fontWeight: FontWeight.w600,
-                    path: iconsIcEmail),
+                CommonButton(
+                  buttonStyle: DefaultButtonStyles().defaultButtonStyle(),
+                  text: 'login'.tr,
+                ),
                 SizedBox(
                   height: DEVICE_HEIGHT * 0.02,
                 ),
                 MyCommonButton(
-                  title: 'Login'.tr,
-                  backgroundColor: AppColors.green,
-                  fontSize: 18,
+                  title: 'login'.tr,
+                  backgroundColor: AppColors.primary,
+                  borderColor: AppColors.black,
+                  fontWeight: FontWeight.w600,
+                  path: iconsIcEmail,
+                ),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
+                ),
+                MyCommonButton(
+                  title: 'login'.tr,
+                  backgroundColor: AppColors.primary,
                   borderColor: AppColors.black,
                   fontWeight: FontWeight.w600,
                 ),

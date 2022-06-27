@@ -3,21 +3,18 @@ import 'package:flutter_svg/svg.dart';
 import '../../general_exports.dart';
 
 class MyCommonButton extends StatelessWidget {
-
-  MyCommonButton({
-    Key? key,
-    this.title,
-    this.backgroundColor,
-    this.fontSize,
-    this.fontWeight,
-    this.borderColor,
-    this.path
-  }) : super(key: key);
+  MyCommonButton(
+      {Key? key,
+      this.title,
+      this.backgroundColor,
+      this.fontWeight,
+      this.borderColor,
+      this.path})
+      : super(key: key);
   String? title;
   double? width;
   int? backgroundColor;
   int? borderColor;
-  double? fontSize;
   FontWeight? fontWeight;
   String? path;
 
@@ -41,17 +38,19 @@ class MyCommonButton extends StatelessWidget {
       child: CommonText(
         text: title,
         style: CommonTextModel(
-          fontSize: fontSize,
+          fontSize: fontH3,
           fontColor: AppColors.white,
           fontWeight: fontWeight,
         ),
         rightChild: path != null
             ? Padding(
-                padding: const EdgeInsets.only(right: 8),
+                padding: EdgeInsets.only(
+                  right: DEVICE_WIDTH * 0.02,
+                ),
                 child: SvgPicture.asset(
                   path!,
-                  width: 24,
-                  height: 24,
+                  width: DEVICE_WIDTH * 0.064,
+                  height: DEVICE_WIDTH * 0.029,
                 ),
               )
             : const Center(),
