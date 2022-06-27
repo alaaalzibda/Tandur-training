@@ -15,35 +15,33 @@ class TestScreen extends StatelessWidget {
                 SizedBox(
                   height: DEVICE_HEIGHT * 0.1,
                 ),
-                CommonButton(
-                  buttonStyle: DefaultButtonStyles().defaultSmallButton(),
-                  text: 'login'.tr,
-                ),
-                SizedBox(
-                  height: DEVICE_HEIGHT * 0.02,
-                ),
-                CommonButton(
-                  buttonStyle: DefaultButtonStyles().defaultButtonStyle(),
-                  text: 'login'.tr,
+                MyCommonButton(
+                  title: 'login'.tr,
+                  style: defaultButtonStyles.whiteBorderButton(),
                 ),
                 SizedBox(
                   height: DEVICE_HEIGHT * 0.02,
                 ),
                 MyCommonButton(
                   title: 'login'.tr,
-                  backgroundColor: AppColors.primary,
-                  borderColor: AppColors.black,
-                  fontWeight: FontWeight.w600,
-                  path: iconsIcEmail,
                 ),
                 SizedBox(
                   height: DEVICE_HEIGHT * 0.02,
                 ),
                 MyCommonButton(
                   title: 'login'.tr,
-                  backgroundColor: AppColors.primary,
-                  borderColor: AppColors.black,
-                  fontWeight: FontWeight.w600,
+                  path: iconsIcTandurLogo,
+                  style: defaultButtonStyles.redBackgroundButtonStyle(),
+                ),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
+                ),
+                MyCommonButton(
+                  title: 'login'.tr,
+                  style: defaultButtonStyles.fullWidthButtonStyle(),
+                  onPress: () {
+                    consoleLog('onPress');
+                  },
                 ),
               ],
             ),
