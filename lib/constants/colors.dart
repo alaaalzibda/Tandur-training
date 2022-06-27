@@ -1,7 +1,7 @@
 class AppColors {
-  static int white = 0xffffffff;
+  static int white = 0xffEEEEEE;
   static int black = 0xff000000;
-  static int primary = 0xFF707070;
+  static int primary = 0xFF8B9A47;
   static int primaryOpacity = 0xFFF0F7F8;
   static int grey = 0xff92A1B1;
   static int greyDark = 0xffD8D8D8;
