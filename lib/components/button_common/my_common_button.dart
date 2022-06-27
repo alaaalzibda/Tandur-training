@@ -2,12 +2,11 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../general_exports.dart';
 
-class CommonButtonApp extends StatelessWidget {
+class MyCommonButton extends StatelessWidget {
 
-  CommonButtonApp({
+  MyCommonButton({
     Key? key,
     this.title,
-    this.width,
     this.backgroundColor,
     this.fontSize,
     this.fontWeight,
@@ -27,7 +26,7 @@ class CommonButtonApp extends StatelessWidget {
     return CommonButton(
       buttonStyle: CommonButtonStyle(
         containerStyle: CommonContainerModel(
-          width: width,
+          width: DEVICE_WIDTH,
           height: 0.064,
           borderBottomStyle: BorderStyle.solid,
           borderColor: borderColor,
@@ -50,7 +49,7 @@ class CommonButtonApp extends StatelessWidget {
             ? Padding(
                 padding: const EdgeInsets.only(right: 8),
                 child: SvgPicture.asset(
-                  path!, // error: runtime type 'String' is not type null
+                  path!,
                   width: 24,
                   height: 24,
                 ),

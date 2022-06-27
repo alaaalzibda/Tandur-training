@@ -1,4 +1,4 @@
-import '../../components/button_common/common_button.dart';
+import '../../components/button_common/my_common_button.dart';
 import '../../general_exports.dart';
 
 class TestScreen extends StatelessWidget {
@@ -12,23 +12,33 @@ class TestScreen extends StatelessWidget {
           child: Center(
             child: Column(
               children: <Widget>[
-                const SizedBox(height: 20),
-
-                // TODO: the color used to test
-                CommonButtonApp(
-                    title: argTextButton,
-                    width: 0.86,
+                SizedBox(height: DEVICE_HEIGHT * 0.1),
+                CommonButton(
+                  buttonStyle: DefaultButtonStyles().defaultSmallButton(),
+                  text: 'Login'.tr,
+                ),
+                SizedBox(height: DEVICE_HEIGHT * 0.02),
+                Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.08),
+                  child: CommonButton(
+                    buttonStyle: DefaultButtonStyles().defaultButtonStyle(),
+                    text: 'Login'.tr,
+                  ),
+                ),
+                SizedBox(height: DEVICE_HEIGHT * 0.02),
+                MyCommonButton(
+                    title: 'Login'.tr,
                     backgroundColor: AppColors.green,
                     fontSize: 18,
                     borderColor: AppColors.black,
                     fontWeight: FontWeight.w600,
                     path: iconsIcEmail),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
                 ),
-                CommonButtonApp(
-                  title: argTextButton,
-                  width: 0.86,
+                MyCommonButton(
+                  title: 'Login'.tr,
                   backgroundColor: AppColors.green,
                   fontSize: 18,
                   borderColor: AppColors.black,

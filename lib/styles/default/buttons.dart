@@ -8,8 +8,7 @@ class DefaultButtonStyles {
         containerStyle: _defaultContainerStyles.defaultButtonContainer,
         style: defaultButtonModel(),
         textStyle: _defaultTextStyles.h3MediumStyleWhite(),
-      );
-
+  );
   CommonButtonStyle loginButtonStyle({
     dynamic isEnable = false,
   }) =>
@@ -23,12 +22,15 @@ class DefaultButtonStyles {
       );
 
   CommonButtonStyle defaultSmallButton() => CommonButtonStyle(
+    containerStyle: _defaultContainerStyles.defaultSmallButtonContainer,
         style: CommonButtonModel(
-          backgroundColor: AppColors.black,
+          backgroundColor: AppColors.primary,
           borderRadius: 10,
         ),
         textStyle: CommonTextModel(
           fontColor: AppColors.white,
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
         ),
       );
 
