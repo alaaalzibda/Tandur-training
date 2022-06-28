@@ -1,6 +1,6 @@
-const double fontH1 = 28.0;
-const double fontH2 = 20.0;
-const double fontH3 = 16.0;
-const double fontH4 = 14.0;
-const double fontH5 = 12.0;
-const double fontH6 = 10.0;
+const double fontH1 = 32.0;
+const double fontH2 = 24.0;
+const double fontH3 = 18.0;
+const double fontH4 = 16.0;
+const double fontH5 = 14.0;
+const double fontH6 = 12.0;

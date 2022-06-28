@@ -25,13 +25,13 @@ class SignupScreen extends StatelessWidget {
                   ),
                   CommonText(
                     text: 'lets_farm'.tr,
-                    style: defaultTextStyles.headerStyle(),
+                    style: defaultTextStyles.h1StyleWhite(),
                   ),
                   _mySpace(),
                   CommonText(
                     text: 'description_sign_up'.tr,
                     style:
-                        defaultTextStyles.h3StyleWhite().copyWith(fontSize: 18),
+                        defaultTextStyles.h3StyleWhite(),
                   ),
                   _mySpace(),
 
