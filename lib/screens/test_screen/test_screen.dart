@@ -1,3 +1,4 @@
+import '../../components/button_common/my_common_button.dart';
 import '../../general_exports.dart';
 
 class TestScreen extends StatelessWidget {
@@ -6,10 +7,44 @@ class TestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Center(
-          child: CommonText(
-            text: 'my_profile'.tr,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.1,
+                ),
+                MyCommonButton(
+                  title: 'login'.tr,
+                  style: defaultButtonStyles.whiteBorderButton(),
+                ),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
+                ),
+                MyCommonButton(
+                  title: 'login'.tr,
+                ),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
+                ),
+                MyCommonButton(
+                  title: 'login'.tr,
+                  path: iconsIcTandurLogo,
+                  style: defaultButtonStyles.redBackgroundButtonStyle(),
+                ),
+                SizedBox(
+                  height: DEVICE_HEIGHT * 0.02,
+                ),
+                MyCommonButton(
+                  title: 'login'.tr,
+                  style: defaultButtonStyles.fullWidthButtonStyle(),
+                  onPress: () {
+                    consoleLog('onPress');
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
