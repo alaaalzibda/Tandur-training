@@ -37,11 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
               padding: EdgeInsets.only(top: DEVICE_HEIGHT * 0.02),
               child: CommonText(
                 text: 'app_name'.tr,
-                style: CommonTextModel(
-                  fontSize: 24,
-                  fontColor: AppColors.white,
-                  fontFamily: 'poppins',
-                ),
+                style: defaultTextStyles.h2StyleWhite().copyWith(fontSize: 24),
               ),
             ),
           ),
