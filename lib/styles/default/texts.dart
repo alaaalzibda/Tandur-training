@@ -5,9 +5,18 @@ class DefaultTextStyles {
     fontFamily: 'Poppins',
   );
 
+  CommonTextModel defaultHeaderTextStyle = CommonTextModel(
+    fontFamily: 'Poppins',
+    fontSize: 32,
+  );
+
   CommonTextModel mediumTextStyle = CommonTextModel(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
+  );
+
+  CommonTextModel headerStyle() => defaultHeaderTextStyle.copyWith(
+    fontColor: AppColors.white
   );
 
   CommonTextModel h1Style() => defaultTextStyle.copyWith(

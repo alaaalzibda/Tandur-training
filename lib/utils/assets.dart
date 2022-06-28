@@ -31,3 +31,4 @@ const String imagesPath = 'assets/images/';
 // ****** IMAGES ******
 
 const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
+const String imageEmailSubmitLogo = '${imagesPath}ic_email_submit_logo.png';
