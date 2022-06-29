@@ -6,39 +6,54 @@ class TestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Center(
-              child: CommonText(
-                text: 'Enter your Email'.tr,
-                rightChild: const Icon(Icons.alternate_email),
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Center(
+                child: CommonTextInput(
+                  style: CommonTextInputModel(
+                    hint: 'Enter your Email'.tr,
+                    prefixIcon: CommonIcon(
+                        containerStyle: CommonContainerModel(
+                          paddingLeft: 0.03,
+                          paddingRight: 0.01,
+                        ),
+                        path: Icons.alternate_email_outlined),
+                  ),
+                  //leftChild: const Icon(Icons.alternate_email),
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: DEVICE_WIDTH, vertical: DEVICE_HEIGHT),
-              child: CommonText(
-                text: 'Enter your Password'.tr,
-                rightChild: const Icon(Icons.lock),
-                leftChild: TextEditingController().value.text.isEmpty
-                    ? const Icon(Icons.error)
-                    : const Center(),
+              Center(
+                child: CommonTextInput(
+                  style: CommonTextInputModel(
+                    hint: 'Enter your password'.tr,
+                    prefixIcon: CommonIcon(
+                        containerStyle: CommonContainerModel(
+                          paddingLeft: 0.03,
+                          paddingRight: 0.01,
+                        ),
+                        path: Icons.lock),
+                  ),
+                  //leftChild: const Icon(Icons.alternate_email),
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: DEVICE_WIDTH, vertical: DEVICE_HEIGHT),
-              child: CommonText(
-                text: 'Search'.tr,
-                rightChild: const Icon(Icons.search),
+              Center(
+                child: CommonTextInput(
+                  style: CommonTextInputModel(
+                    hint: 'Search'.tr,
+                    prefixIcon: CommonIcon(
+                        containerStyle: CommonContainerModel(
+                          paddingLeft: 0.03,
+                          paddingRight: 0.01,
+                        ),
+                        path: Icons.search),
+                  ),
+                ),
               ),
-            ),
-            // const Center(
-            //   child: InputText(),
-            // ),
-          ],
+            ],
+          ),
         ),
       ),
     );
