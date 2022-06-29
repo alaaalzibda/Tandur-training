@@ -2,14 +2,24 @@ import '../../general_exports.dart';
 
 class DefaultTextInputStyles {
   CommonTextInputModel defaultTextInputModel() => CommonTextInputModel(
+        prefixWidget: CommonText(
+          containerStyle: CommonContainerModel(
+            marginHorizontal: DEVICE_WIDTH,
+            marginVertical: DEVICE_HEIGHT,
+          ),
+        ),
         fontSize: fontH3,
       );
 
-  CommonTextInputModel descriptionTextInputModel() => CommonTextInputModel(
+  CommonTextInputModel descriptionTextInputModel(dynamic prefixIcon,
+          {dynamic errorIcon}) =>
+      CommonTextInputModel(
         fontSize: fontH3,
         minLines: 4,
         hint: 'langType',
         withBorderSide: false,
+        prefixIcon: prefixIcon ?? const Icon(Icons.lock),
+        suffixIcon: errorIcon ?? Icon,
       );
 
   CommonContainerModel descriptionContainerModel() => CommonContainerModel(
