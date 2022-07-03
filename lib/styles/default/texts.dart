@@ -2,11 +2,11 @@ import '../../general_exports.dart';
 
 class DefaultTextStyles {
   CommonTextModel defaultTextStyle = CommonTextModel(
-    fontFamily: 'Poppins',
+    fontFamily: 'poppins',
   );
 
   CommonTextModel mediumTextStyle = CommonTextModel(
-    fontFamily: 'Poppins',
+    fontFamily: 'poppins',
     fontWeight: FontWeight.w600,
   );
 

@@ -1,5 +1,7 @@
+import '../../components/button_common/my_common_button.dart';
 import '../../components/text_input/my_text_input.dart';
 import '../../general_exports.dart';
+// import 'input_text.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({Key? key}) : super(key: key);
@@ -11,104 +13,96 @@ class TestScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-
-              SizedBox(height: DEVICE_HEIGHT * 0.1),
-
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.05),
-                child: MyTextField(
-                  hintText: 'enter_your_email',
-                  controller: TextEditingController(),
-                  obscureText: false,
-                  colorContent: Color(AppColors.black),
-                  pathSuffixIcon: iconWarningPassword,
-                  path: iconEmail,
-                ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.01,
               ),
-
-              SizedBox(height: DEVICE_HEIGHT * 0.1),
-
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
-                    style: CommonTextInputModel(
-                      hint: 'enter_your_email'.tr,
-                      radius: 8,
-                      prefixIcon: CommonIcon(
-                          containerStyle: CommonContainerModel(
-                            paddingLeft: 0.03,
-                            paddingRight: 0.01,
-                          ),
-                          path: Icons.alternate_email_outlined),
+                    style: defaultTextInputStyles.textFieldInputStyle(
+                      'enter_your_email',
+                      iconEmail,
                     ),
-                    //leftChild: const Icon(Icons.alternate_email),
+                    containerStyle:
+                    defaultTextInputStyles.descriptionContainerModel(),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
+                child: Center(
+                  child: CommonTextInput(
+                    style: defaultTextInputStyles.textFieldInputStyle(
+                      'enter_your_password',
+                      iconWarningPassword,
+                      secure: true,
+                    ),
+                    containerStyle:
+                    defaultTextInputStyles.descriptionContainerModel(),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
+                child: Center(
+                  child: CommonTextInput(
+                    style: defaultTextInputStyles.textFieldInputStyle(
+                      'search',
+                      iconWarningPassword,
+                    ),
+                    containerStyle:
+                    defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),
               Center(
-                child: CommonTextInput(
-                  style: CommonTextInputModel(
-                    hint: 'enter_your_password'.tr,
-                    prefixIcon: CommonIcon(
-                        containerStyle: CommonContainerModel(
-                          paddingLeft: 0.03,
-                          paddingRight: 0.01,
-                        ),
-                        path: Icons.lock),
-                  ),
-                  //leftChild: const Icon(Icons.alternate_email),
-                ),
-              ),
-              Center(
-                child: CommonTextInput(
-                  style: CommonTextInputModel(
-                    hint: 'search'.tr,
-                    prefixIcon: CommonIcon(
-                        containerStyle: CommonContainerModel(
-                          paddingLeft: 0.03,
-                          paddingRight: 0.01,
-                        ),
-                        path: Icons.search,
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.1,
                     ),
-                  ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                      style: defaultButtonStyles.whiteBorderButton(),
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.02,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.02,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                      path: iconsIcTandurLogo,
+                      style: defaultButtonStyles.redBackgroundButtonStyle(),
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.02,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                      style: defaultButtonStyles.fullWidthButtonStyle(),
+                      onPress: () {
+                        consoleLog('onPress');
+                      },
+                    ),
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: DEVICE_HEIGHT * 0.1,
-              ),
-              MyCommonButton(
-                title: 'login'.tr,
-                style: defaultButtonStyles.whiteBorderButton(),
-              ),
-              SizedBox(
-                height: DEVICE_HEIGHT * 0.02,
-              ),
-              MyCommonButton(
-                title: 'login'.tr,
-              ),
-              SizedBox(
-                height: DEVICE_HEIGHT * 0.02,
-              ),
-              MyCommonButton(
-                title: 'login'.tr,
-                path: iconsIcTandurLogo,
-                style: defaultButtonStyles.redBackgroundButtonStyle(),
-              ),
-              SizedBox(
-                height: DEVICE_HEIGHT * 0.02,
-              ),
-              MyCommonButton(
-                title: 'login'.tr,
-                style: defaultButtonStyles.fullWidthButtonStyle(),
-                onPress: () {
-                  consoleLog('onPress');
-                },
               ),
             ],
-
-                ),
+          ),
         ),
       ),
     );
-  }}
+  }
+}
