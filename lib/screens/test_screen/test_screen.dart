@@ -42,7 +42,6 @@ class TestScreen extends StatelessWidget {
                     containerStyle:
                         defaultTextInputStyles.descriptionContainerModel(),
                   ),
-                  //leftChild: const Icon(Icons.alternate_email),
                 ),
               ),
               Padding(
