@@ -33,11 +33,13 @@ class DefaultTextInputStyles {
         textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
           containerStyle: CommonContainerModel(
-            paddingLeft: 0.05,
-            paddingRight: 0.048,
+            paddingLeft: 0.01,
+            paddingRight: 0.005,
+            paddingVertical: 0.02,
           ),
           path: icon,
           color: AppColors.blackLight,
+          iconDataSize: 18.0
         ),
         obscureText: secure ?? false,
       );

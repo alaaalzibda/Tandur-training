@@ -6,4 +6,9 @@ const Map<String, String> ar = <String, String>{
   'search': 'بحث',
   'app_name': 'تطبيق تندور',
   'login' : 'تسجيل الدخول',
+  'login_with_email' : 'تسجيل الدخول بالبريد الإلكتروني',
+  'email' : 'البريد الإلكتروني',
+  'password' : 'كلمة المرور',
+  'enter' : 'دخول',
+  'return' : 'رجوع',
 };
