@@ -13,5 +13,3 @@ const Map<String, String> ar = <String, String>{
   'enter_your_password': 'أدخل كلمة المرور',
   'search': 'بحث',
 };
-  'app_name': 'تطبيق تندور',
-  'login' : 'تسجيل الدخول',

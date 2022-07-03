@@ -24,7 +24,7 @@ class TestScreen extends StatelessWidget {
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
                       'enter_your_email',
-                      iconEmail,
+                      iconsIcEmail,
                     ),
                     containerStyle:
                     defaultTextInputStyles.descriptionContainerModel(),
