@@ -7,4 +7,7 @@ const Map<String, String> en = <String, String>{
   'email' : 'Email',
   'join_now' : 'Join Now',
   'enter' : 'Enter'
+  'enter_your_email': 'Enter your Email',
+  'enter_your_password': 'Enter your password',
+  'search': 'Search',
 };

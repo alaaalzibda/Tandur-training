@@ -1,3 +1,4 @@
+import '../../components/text_input/my_text_input.dart';
 import '../../general_exports.dart';
 
 class TestScreen extends StatelessWidget {
@@ -5,48 +6,109 @@ class TestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: DEVICE_HEIGHT * 0.1,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+
+              SizedBox(height: DEVICE_HEIGHT * 0.1),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.05),
+                child: MyTextField(
+                  hintText: 'enter_your_email',
+                  controller: TextEditingController(),
+                  obscureText: false,
+                  colorContent: Color(AppColors.black),
+                  pathSuffixIcon: iconWarningPassword,
+                  path: iconEmail,
                 ),
-                MyCommonButton(
-                  title: 'login'.tr,
-                  style: defaultButtonStyles.whiteBorderButton(),
+              ),
+
+              SizedBox(height: DEVICE_HEIGHT * 0.1),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                child: Center(
+                  child: CommonTextInput(
+                    style: CommonTextInputModel(
+                      hint: 'enter_your_email'.tr,
+                      radius: 8,
+                      prefixIcon: CommonIcon(
+                          containerStyle: CommonContainerModel(
+                            paddingLeft: 0.03,
+                            paddingRight: 0.01,
+                          ),
+                          path: Icons.alternate_email_outlined),
+                    ),
+                    //leftChild: const Icon(Icons.alternate_email),
+                  ),
                 ),
-                SizedBox(
-                  height: DEVICE_HEIGHT * 0.02,
+              ),
+              Center(
+                child: CommonTextInput(
+                  style: CommonTextInputModel(
+                    hint: 'enter_your_password'.tr,
+                    prefixIcon: CommonIcon(
+                        containerStyle: CommonContainerModel(
+                          paddingLeft: 0.03,
+                          paddingRight: 0.01,
+                        ),
+                        path: Icons.lock),
+                  ),
+                  //leftChild: const Icon(Icons.alternate_email),
                 ),
-                MyCommonButton(
-                  title: 'login'.tr,
+              ),
+              Center(
+                child: CommonTextInput(
+                  style: CommonTextInputModel(
+                    hint: 'search'.tr,
+                    prefixIcon: CommonIcon(
+                        containerStyle: CommonContainerModel(
+                          paddingLeft: 0.03,
+                          paddingRight: 0.01,
+                        ),
+                        path: Icons.search,
+                    ),
+                  ),
                 ),
-                SizedBox(
-                  height: DEVICE_HEIGHT * 0.02,
+              ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.1,
+              ),
+              MyCommonButton(
+                title: 'login'.tr,
+                style: defaultButtonStyles.whiteBorderButton(),
+              ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.02,
+              ),
+              MyCommonButton(
+                title: 'login'.tr,
+              ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.02,
+              ),
+              MyCommonButton(
+                title: 'login'.tr,
+                path: iconsIcTandurLogo,
+                style: defaultButtonStyles.redBackgroundButtonStyle(),
+              ),
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.02,
+              ),
+              MyCommonButton(
+                title: 'login'.tr,
+                style: defaultButtonStyles.fullWidthButtonStyle(),
+                onPress: () {
+                  consoleLog('onPress');
+                },
+              ),
+            ],
+
                 ),
-                MyCommonButton(
-                  title: 'login'.tr,
-                  path: iconsIcTandurLogo,
-                  style: defaultButtonStyles.redBackgroundButtonStyle(),
-                ),
-                SizedBox(
-                  height: DEVICE_HEIGHT * 0.02,
-                ),
-                MyCommonButton(
-                  title: 'login'.tr,
-                  style: defaultButtonStyles.fullWidthButtonStyle(),
-                  onPress: () {
-                    consoleLog('onPress');
-                  },
-                ),
-              ],
-            ),
-          ),
         ),
       ),
     );
-  }
-}
+  }}

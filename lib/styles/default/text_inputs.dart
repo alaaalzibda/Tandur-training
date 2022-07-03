@@ -1,14 +1,15 @@
 import '../../general_exports.dart';
 
 class DefaultTextInputStyles {
-  CommonTextInputModel defaultTextInputModel() => CommonTextInputModel(
+  CommonTextInputModel defaultTextInputModel({dynamic errorIcon}) =>
+      CommonTextInputModel(
         fontSize: fontH3,
       );
 
   CommonTextInputModel descriptionTextInputModel() => CommonTextInputModel(
         fontSize: fontH3,
         minLines: 4,
-        hint: 'langType',
+        hint: '',
         withBorderSide: false,
       );
 
