@@ -19,4 +19,19 @@ class DefaultTextInputStyles {
         borderWidth: 1,
         marginBottom: 0.015,
       );
+
+  CommonTextInputModel textFieldInputStyle(String hint, IconData icon,
+          {bool? secure}) =>
+      CommonTextInputModel(
+        hint: hint.tr,
+        radius: 8,
+        prefixIcon: CommonIcon(
+          containerStyle: CommonContainerModel(
+            paddingLeft: 0.03,
+            paddingRight: 0.01,
+          ),
+          path: icon,
+        ),
+        obscureText: secure,
+      );
 }

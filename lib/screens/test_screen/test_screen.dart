@@ -13,43 +13,22 @@ class TestScreen extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: CommonTextInput(
-                  style: CommonTextInputModel(
-                    hint: 'Enter your Email'.tr,
-                    prefixIcon: CommonIcon(
-                        containerStyle: CommonContainerModel(
-                          paddingLeft: 0.03,
-                          paddingRight: 0.01,
-                        ),
-                        path: Icons.alternate_email_outlined),
-                  ),
-                  //leftChild: const Icon(Icons.alternate_email),
+                  style: defaultTextInputStyles.textFieldInputStyle(
+                      'Enter your Email', Icons.alternate_email_outlined),
                 ),
               ),
               Center(
                 child: CommonTextInput(
-                  style: CommonTextInputModel(
-                    hint: 'Enter your password'.tr,
-                    prefixIcon: CommonIcon(
-                        containerStyle: CommonContainerModel(
-                          paddingLeft: 0.03,
-                          paddingRight: 0.01,
-                        ),
-                        path: Icons.lock),
-                  ),
-                  //leftChild: const Icon(Icons.alternate_email),
+                  style: defaultTextInputStyles.textFieldInputStyle(
+                      'Enter your password', Icons.lock,
+                      secure: true),
                 ),
+                //leftChild: const Icon(Icons.alternate_email),
               ),
               Center(
                 child: CommonTextInput(
-                  style: CommonTextInputModel(
-                    hint: 'Search'.tr,
-                    prefixIcon: CommonIcon(
-                        containerStyle: CommonContainerModel(
-                          paddingLeft: 0.03,
-                          paddingRight: 0.01,
-                        ),
-                        path: Icons.search),
-                  ),
+                  style: defaultTextInputStyles.textFieldInputStyle(
+                      'search', Icons.search),
                 ),
               ),
             ],
