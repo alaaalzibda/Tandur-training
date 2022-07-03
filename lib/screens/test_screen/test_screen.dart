@@ -11,24 +11,33 @@ class TestScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Center(
-                child: CommonTextInput(
-                  style: defaultTextInputStyles.textFieldInputStyle(
-                      'Enter your Email', Icons.alternate_email_outlined),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Center(
+                  child: CommonTextInput(
+                    style: defaultTextInputStyles.textFieldInputStyle(
+                        'enter_your_email', Icons.alternate_email_outlined),
+                  ),
                 ),
               ),
-              Center(
-                child: CommonTextInput(
-                  style: defaultTextInputStyles.textFieldInputStyle(
-                      'Enter your password', Icons.lock,
-                      secure: true),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Center(
+                  child: CommonTextInput(
+                    style: defaultTextInputStyles.textFieldInputStyle(
+                        'enter_your_password', Icons.lock,
+                        secure: true),
+                  ),
+                  //leftChild: const Icon(Icons.alternate_email),
                 ),
-                //leftChild: const Icon(Icons.alternate_email),
               ),
-              Center(
-                child: CommonTextInput(
-                  style: defaultTextInputStyles.textFieldInputStyle(
-                      'search', Icons.search),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                child: Center(
+                  child: CommonTextInput(
+                    style: defaultTextInputStyles.textFieldInputStyle(
+                        'search', Icons.search),
+                  ),
                 ),
               ),
             ],

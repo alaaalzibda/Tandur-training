@@ -3,7 +3,7 @@ class AppColors {
   static int black = 0xff000000;
   static int primary = 0xFF707070;
   static int primaryOpacity = 0xFFF0F7F8;
-  static int grey = 0xff92A1B1;
+  static int grey = 0xffD6E3E2;
   static int greyDark = 0xffD8D8D8;
   static int red = 0xffEC4059;
   static int pink = 0xffF1EAEC;

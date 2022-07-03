@@ -24,6 +24,7 @@ class DefaultTextInputStyles {
           {bool? secure}) =>
       CommonTextInputModel(
         hint: hint.tr,
+        hintColor: Color(AppColors.black),
         radius: 8,
         prefixIcon: CommonIcon(
           containerStyle: CommonContainerModel(
