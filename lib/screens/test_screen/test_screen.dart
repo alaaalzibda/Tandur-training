@@ -11,31 +11,52 @@ class TestScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              SizedBox(
+                height: DEVICE_HEIGHT * 0.01,
+              ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
-                        'enter_your_email', Icons.alternate_email_outlined),
+                      'enter_your_email',
+                      iconEmail,
+                    ),
+                    containerStyle:
+                        defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
-                        'enter_your_password', Icons.lock,
-                        secure: true),
+                      'enter_your_password',
+                      iconWarningPassword,
+                      secure: true,
+                    ),
+                    containerStyle:
+                        defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
-                        'search', Icons.search),
+                      'search',
+                      iconWarningPassword,
+                    ),
+                    containerStyle:
+                        defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),
