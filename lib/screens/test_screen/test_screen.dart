@@ -28,7 +28,6 @@ class TestScreen extends StatelessWidget {
                         'enter_your_password', Icons.lock,
                         secure: true),
                   ),
-                  //leftChild: const Icon(Icons.alternate_email),
                 ),
               ),
               Padding(
