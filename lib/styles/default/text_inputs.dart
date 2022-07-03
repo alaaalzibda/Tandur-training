@@ -3,36 +3,39 @@ import '../../general_exports.dart';
 class DefaultTextInputStyles {
   CommonTextInputModel defaultTextInputModel({dynamic errorIcon}) =>
       CommonTextInputModel(
-        fontSize: fontH3,
+        fontSize: fontH4,
       );
 
   CommonTextInputModel descriptionTextInputModel() => CommonTextInputModel(
-        fontSize: fontH3,
+        fontSize: fontH4,
         minLines: 4,
         hint: '',
         withBorderSide: false,
       );
 
   CommonContainerModel descriptionContainerModel() => CommonContainerModel(
+        height: 0.064,
         borderColor: AppColors.grey,
         borderRadius: 0.025,
-        borderWidth: 1,
-        marginBottom: 0.015,
+        backgroundColor: AppColors.grey,
       );
 
-  CommonTextInputModel textFieldInputStyle(String hint, IconData icon,
+  CommonTextInputModel textFieldInputStyle(String hint, String icon,
           {bool? secure}) =>
       CommonTextInputModel(
         hint: hint.tr,
         hintColor: Color(AppColors.black),
         radius: 8,
+        fontSize: fontH4,
+        textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
           containerStyle: CommonContainerModel(
-            paddingLeft: 0.03,
-            paddingRight: 0.01,
+            paddingLeft: 0.05,
+            paddingRight: 0.048,
           ),
           path: icon,
+          color: AppColors.blackLight,
         ),
-        obscureText: secure,
+        obscureText: secure ?? false,
       );
 }
