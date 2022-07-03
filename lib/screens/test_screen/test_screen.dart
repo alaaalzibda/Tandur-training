@@ -60,44 +60,44 @@ class TestScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            ],
-            Center(
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: DEVICE_HEIGHT * 0.1,
-                  ),
-                  MyCommonButton(
-                    title: 'login'.tr,
-                    style: defaultButtonStyles.whiteBorderButton(),
-                  ),
-                  SizedBox(
-                    height: DEVICE_HEIGHT * 0.02,
-                  ),
-                  MyCommonButton(
-                    title: 'login'.tr,
-                  ),
-                  SizedBox(
-                    height: DEVICE_HEIGHT * 0.02,
-                  ),
-                  MyCommonButton(
-                    title: 'login'.tr,
-                    path: iconsIcTandurLogo,
-                    style: defaultButtonStyles.redBackgroundButtonStyle(),
-                  ),
-                  SizedBox(
-                    height: DEVICE_HEIGHT * 0.02,
-                  ),
-                  MyCommonButton(
-                    title: 'login'.tr,
-                    style: defaultButtonStyles.fullWidthButtonStyle(),
-                    onPress: () {
-                      consoleLog('onPress');
-                    },
-                  ),
-                ],
+              Center(
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.1,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                      style: defaultButtonStyles.whiteBorderButton(),
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.02,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.02,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                      path: iconsIcTandurLogo,
+                      style: defaultButtonStyles.redBackgroundButtonStyle(),
+                    ),
+                    SizedBox(
+                      height: DEVICE_HEIGHT * 0.02,
+                    ),
+                    MyCommonButton(
+                      title: 'login'.tr,
+                      style: defaultButtonStyles.fullWidthButtonStyle(),
+                      onPress: () {
+                        consoleLog('onPress');
+                      },
+                    ),
+                  ],
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
