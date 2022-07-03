@@ -35,6 +35,7 @@ class DefaultTextInputStyles {
           containerStyle: CommonContainerModel(
             paddingLeft: 0.05,
             paddingRight: 0.048,
+            height: 0.5,
           ),
           path: icon,
           color: AppColors.blackLight,

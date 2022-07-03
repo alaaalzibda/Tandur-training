@@ -5,5 +5,12 @@ const Map<String, String> ar = <String, String>{
   'enter_your_password': 'أدخل كلمة المرور',
   'search': 'بحث',
   'app_name': 'تطبيق تندور',
-  'login' : 'تسجيل الدخول',
+  'login': 'تسجيل الدخول',
+  'info': 'أكمل بياناتك \n الشخصية',
+  'enter_your_name': 'أدخل اسمك',
+  'signUp': 'اشتراك',
+  'fullName': 'اسمك الكامل',
+  'email': 'ايميلك',
+  'confirm_your_password': 'اكد كلمة المرور',
+  'return': 'عودة',
 };

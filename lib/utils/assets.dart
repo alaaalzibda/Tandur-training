@@ -17,7 +17,7 @@ const String iconsIcLogout = '${iconsPath}ic_logout.svg';
 const String iconsIcPassword = '${iconsPath}ic_password.svg';
 const String iconsIcPasswordCheck = '${iconsPath}ic_password_check.svg';
 const String iconsIcPasswordWrong = '${iconsPath}ic_password_wrong.svg';
-const String iconsIcPerson = '${iconsPath}ic_person.svg';
+const String iconsIcPerson = '${iconsPath}ic_profile.svg';
 const String iconsIcRain = '${iconsPath}ic_rain.svg';
 const String iconsIcSearch = '${iconsPath}ic_search.svg';
 const String iconsIcTandurLogo = '${iconsPath}ic_tandur_logo.svg';
@@ -27,10 +27,11 @@ const String iconsVector = '${iconsPath}Vector.svg';
 const String imagesTachyonLogo = '${iconsPath}tachyon_logo.png';
 const String iconEmail = '${iconsPath}ic_email.svg';
 const String iconWarningPassword = '${iconsPath}ic_warning_password.svg';
-
 // ----------------------------------------
 
 const String imagesPath = 'assets/images/';
 // ****** IMAGES ******
 
 const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
+const String iconSignUpLogo = '${imagesPath}ic_sign_up_logo.png';
+const String iconPassword = '${imagesPath}Password.png';

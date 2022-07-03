@@ -6,4 +6,11 @@ const Map<String, String> en = <String, String>{
   'enter_your_email': 'Enter your Email',
   'enter_your_password': 'Enter your password',
   'search': 'Search',
+  'info': 'Complete Your \n Personal Data',
+  'enter_your_name': 'Enter your name',
+  'signUp': 'SignUp',
+  'fullName': 'Full Name',
+  'email': 'Email',
+  'confirm_your_password': 'Confirm Password',
+  'return': 'Return',
 };
