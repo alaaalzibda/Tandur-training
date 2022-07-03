@@ -4,54 +4,35 @@ final DefaultTextStyles _defaultTextStyles = DefaultTextStyles();
 final DefaultContainerStyles _defaultContainerStyles = DefaultContainerStyles();
 
 class DefaultButtonStyles {
-  CommonButtonStyle defaultButtonStyle() => CommonButtonStyle(
-        containerStyle: _defaultContainerStyles.defaultButtonContainer,
-        style: defaultButtonModel(),
-        textStyle: _defaultTextStyles.h3MediumStyleWhite(),
-      );
-
-  CommonButtonStyle loginButtonStyle({
-    dynamic isEnable = false,
+  CommonButtonStyle defaultButtonStyle({
+    dynamic borderColor,
+    dynamic backgroundColor,
+    dynamic width,
   }) =>
       CommonButtonStyle(
-        containerStyle: _defaultContainerStyles.defaultButtonContainer,
-        style: defaultButtonModel().copyWith(
-          backgroundColor: AppColors.greyDark,
-          isEnable: isEnable,
+        containerStyle: CommonContainerModel(
+          height: 0.064,
+          width: width ?? 0.0,
+          borderBottomStyle: BorderStyle.solid,
+          borderColor: borderColor ?? AppColors.transparent,
+          borderWidth: 2.5,
+          borderRadius: 0.03,
         ),
-        textStyle: _defaultTextStyles.h3MediumStyleWhite(),
-      );
-
-  CommonButtonStyle defaultSmallButton() => CommonButtonStyle(
         style: CommonButtonModel(
-          backgroundColor: AppColors.black,
-          borderRadius: 10,
-        ),
-        textStyle: CommonTextModel(
-          fontColor: AppColors.white,
+          backgroundColor: backgroundColor ?? AppColors.primary,
+          borderRadius: 8,
         ),
       );
 
-  CommonButtonModel defaultButtonModel() => CommonButtonModel(
-        backgroundColor: AppColors.greyDark,
-        borderRadius: 8,
+  CommonButtonStyle whiteBorderButton() => defaultButtonStyle(
+        borderColor: AppColors.white,
       );
 
-  CommonButtonStyle defaultButtonGreyStyle() => CommonButtonStyle(
-        containerStyle: _defaultContainerStyles.defaultButtonContainer,
-        style: defaultGreyButtonModel(),
-        textStyle: _defaultTextStyles.h3MediumStyleWhite().copyWith(
-              fontColor: Colors.black,
-            ),
-      );
+  CommonButtonStyle fullWidthButtonStyle() => defaultButtonStyle(
+    width: DEVICE_WIDTH,
+  );
 
-  CommonButtonModel defaultGreyButtonModel() => defaultButtonModel().copyWith(
-        backgroundColor: AppColors.greyDark,
-      );
-
-  CommonButtonStyle bottomMarginButtonStyle() => defaultButtonStyle().copyWith(
-        containerStyle: defaultButtonStyle().containerStyle!.copyWith(
-              marginBottom: 0.03,
-            ),
-      );
+  CommonButtonStyle redBackgroundButtonStyle() => defaultButtonStyle(
+    backgroundColor: AppColors.red,
+  );
 }

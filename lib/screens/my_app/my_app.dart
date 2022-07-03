@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         );
       },
       theme: ThemeData(
-        fontFamily: 'roboto',
+        fontFamily: 'poppins',
         primaryColor: Color(AppColors.primary),
       ),
 
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       fallbackLocale: const Locale('en'),
       debugShowCheckedModeBanner: false,
       initialRoute:
-          Get.find<MyAppController>().userData == null ? routeTest : routeHome,
+          Get.find<MyAppController>().userData == null ? routeSplash : routeHome,
       getPages: appRoutes,
     );
   }

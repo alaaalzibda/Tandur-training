@@ -5,10 +5,19 @@ class DefaultContainerStyles {
     width: 1,
     height: 0.95,
   );
-
   CommonContainerModel defaultButtonContainer = CommonContainerModel(
     width: 1,
     height: 0.06,
+    borderWidth: 2,
+    borderColor: AppColors.black,
+    borderRadius: 0.03,
+    marginHorizontal: 0.08,
+  );
+
+  CommonContainerModel defaultSmallButtonContainer = CommonContainerModel(
+    width: 0.3,
+    height: 0.06,
+    borderRadius: 0.03,
   );
 
   CommonContainerModel defaultContainerStyle = CommonContainerModel(

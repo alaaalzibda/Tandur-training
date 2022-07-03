@@ -9,4 +9,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeTest,
     page: () => const TestScreen(),
   ),
+  GetPage<SplashScreen>(
+    name: routeSplash,
+    page: () => const SplashScreen(),
+  ),
 ];
