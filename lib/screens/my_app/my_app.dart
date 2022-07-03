@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         );
       },
       theme: ThemeData(
-        fontFamily: 'roboto',
+        fontFamily: 'poppins',
         primaryColor: Color(AppColors.primary),
       ),
 
