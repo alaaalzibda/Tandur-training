@@ -22,4 +22,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSignUp,
     page: () => const SignupScreen(),
   ),
+  GetPage<DetailsScreen>(
+    name: routeDetails,
+    page: () => const DetailsScreen(),
+  ),
 ];
