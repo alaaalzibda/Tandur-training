@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../general_exports.dart';
+import '../../general_exports.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);

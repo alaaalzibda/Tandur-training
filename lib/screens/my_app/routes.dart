@@ -1,5 +1,5 @@
 import '../../general_exports.dart';
-import '../signin_screen.dart';
+import '../auth/signin_screen.dart';
 
 List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<HomeBottomBar>(
