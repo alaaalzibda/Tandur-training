@@ -26,7 +26,7 @@ class DefaultButtonStyles {
 
   CommonButtonStyle whiteBorderButton() => defaultButtonStyle(
         borderColor: AppColors.white,
-      );
+    );
 
   CommonButtonStyle fullWidthButtonStyle() => defaultButtonStyle(
     width: DEVICE_WIDTH,

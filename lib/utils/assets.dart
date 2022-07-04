@@ -34,3 +34,5 @@ const String imagesPath = 'assets/images/';
 // ****** IMAGES ******
 
 const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
+const String imageItemBackground = '${imagesPath}item_image.png';
+const String imageItemShadowBackground = '${imagesPath}Rectangle 4.png';
