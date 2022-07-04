@@ -29,7 +29,7 @@ class DefaultTextInputStyles {
         hint: hint.tr,
         hintColor: Color(AppColors.black),
         radius: 8,
-        fontSize: fontH4,
+        fontSize: fontH5,
         textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
           containerStyle: CommonContainerModel(
