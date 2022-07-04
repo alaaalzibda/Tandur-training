@@ -29,7 +29,7 @@ class HomeBottomBar extends StatelessWidget {
                           borderTopWidth: 1,
                           borderTopColor: AppColors.red,
                           paddingHorizontal: 0.07,
-                          backgroundColor: AppColors.greyDark,
+                          backgroundColor: AppColors.white,
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,8 +58,8 @@ class HomeBottomBar extends StatelessWidget {
                                             height: DEVICE_HEIGHT * 0.025,
                                             color: Color(
                                               index == controller.selectedIndex
-                                                  ? AppColors.red
-                                                  : AppColors.grey,
+                                                  ? AppColors.primary
+                                                  : AppColors.blackLight,
                                             ),
                                           ),
                                           CommonText(
@@ -70,8 +70,8 @@ class HomeBottomBar extends StatelessWidget {
                                                   fontColor: index ==
                                                           controller
                                                               .selectedIndex
-                                                      ? AppColors.red
-                                                      : AppColors.grey,
+                                                      ? AppColors.primary
+                                                      : AppColors.blackLight,
                                                 ),
                                             containerStyle:
                                                 CommonContainerModel(
@@ -81,22 +81,6 @@ class HomeBottomBar extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    if (index == controller.selectedIndex)
-                                      Positioned(
-                                        bottom: 0,
-                                        right: 0,
-                                        left: 0,
-                                        child: Center(
-                                          child: CommonContainer(
-                                            style: CommonContainerModel(
-                                              height: 0.005,
-                                              width: 0.03,
-                                              borderRadius: 0.01,
-                                              backgroundColor: AppColors.red,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
                                   ],
                                 );
                               },

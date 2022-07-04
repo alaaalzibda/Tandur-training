@@ -8,14 +8,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'khaled'),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'khaled'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.usb_rounded), label: 'khaled'),
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30),
         child: ListView(
