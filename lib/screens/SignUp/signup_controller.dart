@@ -28,8 +28,4 @@ class SignUpController extends GetxController {
     }
     return false;
   }
-
-  // void passwordChange() {
-  //     String password = passwordController.value.text;
-  // }
 }

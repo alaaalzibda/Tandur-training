@@ -1,11 +1,11 @@
 import '../../../general_exports.dart';
+import 'signup_controller.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController check = TextEditingController();
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(AppColors.primary),
@@ -112,7 +112,8 @@ class SignUp extends StatelessWidget {
                     vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
-                    textEditingController: check,
+                    textEditingController:
+                        Get.put(SignUpController()).passwordController,
                     onChanged: (String text) {},
                     style: defaultTextInputStyles.textFieldInputStyle(
                       'enter_your_password',

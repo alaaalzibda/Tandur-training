@@ -1,5 +1,5 @@
 import '../../general_exports.dart';
-import '../../screens/SignUp/signUpController.dart';
+import '../../screens/SignUp/signup_controller.dart';
 
 class DefaultTextInputStyles {
   CommonTextInputModel defaultTextInputModel({dynamic errorIcon}) =>
@@ -49,7 +49,7 @@ class DefaultTextInputStyles {
             paddingRight: 0.048,
             height: 0.5,
           ),
-          // onPress: () => Get.put(SignUpController()).passwordEmpty(),
+          //onPress: () => Get.put(SignUpController()).passwordEmpty(),
           path: (Get.put(SignUpController()).passwordEmpty()
                   ? passwordWrong
                   : const IconData(0xe0005)) ??
