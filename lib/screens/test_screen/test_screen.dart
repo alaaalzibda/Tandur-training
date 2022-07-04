@@ -1,4 +1,7 @@
+import '../../components/button_common/my_common_button.dart';
+import '../../components/text_input/my_text_input.dart';
 import '../../general_exports.dart';
+// import 'input_text.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({Key? key}) : super(key: key);
@@ -21,10 +24,10 @@ class TestScreen extends StatelessWidget {
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
                       'enter_your_email',
-                      iconEmail,
+                      iconsIcEmail,
                     ),
                     containerStyle:
-                        defaultTextInputStyles.descriptionContainerModel(),
+                    defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),
@@ -40,7 +43,7 @@ class TestScreen extends StatelessWidget {
                       secure: true,
                     ),
                     containerStyle:
-                        defaultTextInputStyles.descriptionContainerModel(),
+                    defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),
@@ -55,7 +58,7 @@ class TestScreen extends StatelessWidget {
                       iconWarningPassword,
                     ),
                     containerStyle:
-                        defaultTextInputStyles.descriptionContainerModel(),
+                    defaultTextInputStyles.descriptionContainerModel(),
                   ),
                 ),
               ),

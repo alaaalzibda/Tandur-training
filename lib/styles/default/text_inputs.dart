@@ -29,12 +29,13 @@ class DefaultTextInputStyles {
         hint: hint.tr,
         hintColor: Color(AppColors.black),
         radius: 8,
-        fontSize: fontH4,
+        fontSize: fontH5,
         textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
           containerStyle: CommonContainerModel(
-            paddingLeft: 0.05,
-            paddingRight: 0.048,
+            paddingLeft: 0.01,
+            paddingRight: 0.005,
+            paddingVertical: 0.02,
           ),
           path: icon,
           color: AppColors.blackLight,
