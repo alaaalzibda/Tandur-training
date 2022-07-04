@@ -25,6 +25,7 @@ const String iconsIcTemperature = '${iconsPath}ic_temperature.svg';
 const String iconsIcTime = '${iconsPath}ic_time.svg';
 const String iconsVector = '${iconsPath}Vector.svg';
 const String imagesTachyonLogo = '${iconsPath}tachyon_logo.png';
+const String iconEmail = '${iconsPath}ic_email.svg';
 const String iconWarningPassword = '${iconsPath}ic_warning_password.svg';
 
 // ----------------------------------------
@@ -34,3 +35,4 @@ const String imagesPath = 'assets/images/';
 
 const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
 const String imageEmailSubmitLogo = '${imagesPath}ic_email_submit_logo.png';
+const String imageLoginLogo = '${imagesPath}ic_login_logo.png';

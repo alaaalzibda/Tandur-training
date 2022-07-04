@@ -11,4 +11,7 @@ const Map<String, String> en = <String, String>{
   'enter_your_email': 'Enter your Email',
   'enter_your_password': 'Enter your password',
   'search': 'Search',
+  'login_with_email': 'Login with Email',
+  'password': 'Password',
+  'return': 'Return',
 };
