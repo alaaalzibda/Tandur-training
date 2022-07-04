@@ -27,6 +27,8 @@ const String iconsVector = '${iconsPath}Vector.svg';
 const String imagesTachyonLogo = '${iconsPath}tachyon_logo.png';
 const String iconEmail = '${iconsPath}ic_email.svg';
 const String iconWarningPassword = '${iconsPath}ic_warning_password.svg';
+const String iconPassword = '${iconsPath}ic_lock.svg';
+const String iconsIcWarningPassword = '${iconsPath}ic_warning_password.svg';
 // ----------------------------------------
 
 const String imagesPath = 'assets/images/';
@@ -34,4 +36,3 @@ const String imagesPath = 'assets/images/';
 
 const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
 const String iconSignUpLogo = '${imagesPath}ic_sign_up_logo.png';
-const String iconPassword = '${imagesPath}Password.png';

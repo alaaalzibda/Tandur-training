@@ -1,5 +1,5 @@
 import '../../general_exports.dart';
-import '../signUp.dart';
+import '../SignUp/signup.dart';
 
 List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<HomeBottomBar>(

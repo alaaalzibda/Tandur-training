@@ -1,4 +1,4 @@
-import '../../general_exports.dart';
+import '../../../general_exports.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -6,7 +6,6 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController check = TextEditingController();
-    const bool visibleIcon = false;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(AppColors.primary),
@@ -17,7 +16,7 @@ class SignUp extends StatelessWidget {
                 height: DEVICE_HEIGHT * 0.01,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(30, 121, 30.14, 78),
+                padding: const EdgeInsets.fromLTRB(40, 121, 30.14, 78),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -46,7 +45,7 @@ class SignUp extends StatelessWidget {
               ),
               CommonText(
                 containerStyle: CommonContainerModel(
-                  paddingRight: 0.85,
+                  paddingRight: 0.7,
                 ),
                 text: 'email'.tr,
                 style: CommonTextModel(
@@ -56,7 +55,9 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
@@ -70,7 +71,7 @@ class SignUp extends StatelessWidget {
               ),
               CommonText(
                 containerStyle: CommonContainerModel(
-                  paddingRight: 0.8,
+                  paddingRight: 0.65,
                 ),
                 text: 'fullName'.tr,
                 style: CommonTextModel(
@@ -80,7 +81,9 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
@@ -94,7 +97,7 @@ class SignUp extends StatelessWidget {
               ),
               CommonText(
                 containerStyle: CommonContainerModel(
-                  paddingRight: 0.65,
+                  paddingRight: 0.5,
                 ),
                 text: 'confirm_your_password'.tr,
                 style: CommonTextModel(
@@ -104,14 +107,18 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(
+                    horizontal: DEVICE_WIDTH * 0.1,
+                    vertical: DEVICE_HEIGHT * 0.01),
                 child: Center(
                   child: CommonTextInput(
                     textEditingController: check,
+                    onChanged: (String text) {},
                     style: defaultTextInputStyles.textFieldInputStyle(
                       'enter_your_password',
                       iconPassword,
                       secure: true,
+                      passwordWrong: iconsIcWarningPassword,
                     ),
                     containerStyle:
                         defaultTextInputStyles.descriptionContainerModel(),
@@ -124,13 +131,12 @@ class SignUp extends StatelessWidget {
               MyCommonButton(
                 title: 'signUp'.tr,
                 style: defaultButtonStyles.fullWidthWhiteBorderButtonStyle(),
+                onPress: () {},
               ),
               MyCommonButton(
                 title: 'return'.tr,
                 style: defaultButtonStyles.fullWidthButtonStyle(),
-                onPress: () {
-                  consoleLog('onPress');
-                },
+                onPress: () {},
               ),
             ],
           ),
