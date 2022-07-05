@@ -24,6 +24,8 @@ class DefaultTextInputStyles {
     String hint,
     String icon, {
     bool? secure,
+    String? passwordWrong,
+    bool? checkPassword = false,
   }) =>
       CommonTextInputModel(
         hint: hint.tr,
@@ -41,6 +43,16 @@ class DefaultTextInputStyles {
           path: icon,
           color: AppColors.blackLight,
         ),
+        suffixIcon: CommonIcon(
+          containerStyle: CommonContainerModel(
+            paddingLeft: 0.05,
+            paddingRight: 0.048,
+            height: 0.5,
+          ),
+          path: checkPassword! ? passwordWrong : const IconData(0xe0005),
+          color: AppColors.red,
+        ),
         obscureText: secure ?? false,
+        obscuringCharacter: '*',
       );
 }
