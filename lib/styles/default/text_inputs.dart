@@ -24,35 +24,23 @@ class DefaultTextInputStyles {
     String hint,
     String icon, {
     bool? secure,
-    String? passwordWrong,
-    bool? checkPassword = false,
   }) =>
       CommonTextInputModel(
         hint: hint.tr,
         hintColor: Color(AppColors.black),
         radius: 8,
-        fontSize: fontH4,
+        fontSize: fontH5,
         textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
           containerStyle: CommonContainerModel(
+            paddingLeft: 0.01,
+            paddingRight: 0.005,
             paddingVertical: 0.02,
-            paddingLeft: 0.05,
-            paddingRight: 0.048,
-            height: 0.5,
           ),
           path: icon,
           color: AppColors.blackLight,
-        ),
-        suffixIcon: CommonIcon(
-          containerStyle: CommonContainerModel(
-            paddingLeft: 0.05,
-            paddingRight: 0.048,
-            height: 0.5,
-          ),
-          path: checkPassword! ? passwordWrong : const IconData(0xe0005),
-          color: AppColors.red,
+          iconDataSize: 18.0
         ),
         obscureText: secure ?? false,
-        obscuringCharacter: '*',
       );
 }

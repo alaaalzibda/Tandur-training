@@ -29,13 +29,10 @@ class DefaultButtonStyles {
       );
 
   CommonButtonStyle fullWidthButtonStyle() => defaultButtonStyle(
-        width: DEVICE_WIDTH,
-      );
-  CommonButtonStyle fullWidthWhiteBorderButtonStyle() => defaultButtonStyle(
-        width: DEVICE_WIDTH,
-        borderColor: AppColors.white,
-      );
+    width: DEVICE_WIDTH,
+  );
+
   CommonButtonStyle redBackgroundButtonStyle() => defaultButtonStyle(
-        backgroundColor: AppColors.red,
-      );
+    backgroundColor: AppColors.red,
+  );
 }

@@ -39,7 +39,7 @@ class TestScreen extends StatelessWidget {
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
                       'enter_your_password',
-                      iconsVector,
+                      iconWarningPassword,
                       secure: true,
                     ),
                     containerStyle:
@@ -55,7 +55,7 @@ class TestScreen extends StatelessWidget {
                   child: CommonTextInput(
                     style: defaultTextInputStyles.textFieldInputStyle(
                       'search',
-                      iconsIcSearch,
+                      iconWarningPassword,
                     ),
                     containerStyle:
                     defaultTextInputStyles.descriptionContainerModel(),

@@ -1,4 +1,5 @@
 import '../../general_exports.dart';
+import '../../utils/controllers/splash_screen_controller.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
