@@ -1,5 +1,4 @@
 import '../../general_exports.dart';
-import '../signUp.dart';
 
 List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<HomeBottomBar>(
@@ -14,8 +13,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSplash,
     page: () => const SplashScreen(),
   ),
-  GetPage<SignUp>(
+  GetPage<SignUpFromScreen>(
     name: routeSignUpForm,
-    page: () => const SignUp(),
+    page: () => const SignUpFromScreen(),
   ),
 ];
