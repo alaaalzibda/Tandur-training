@@ -9,7 +9,7 @@ class SplashScreenController extends GetxController{
     super.onInit();
     Timer(
       const Duration(seconds: 5),
-          () => Get.offNamed(routeHome),
+          () => Get.offNamed(routeSignUp),
     );
   }
 }

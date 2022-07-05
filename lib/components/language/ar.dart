@@ -8,9 +8,10 @@ const Map<String, String> ar = <String, String>{
   'login': 'تسجيل الدخول',
   'info': 'أكمل بياناتك \n الشخصية',
   'enter_your_name': 'أدخل اسمك',
-  'signUp': 'اشتراك',
-  'fullName': 'اسمك الكامل',
+  'sign_up': 'اشتراك',
+  'full_name': 'اسمك الكامل',
   'email': 'ايميلك',
   'confirm_your_password': 'اكد كلمة المرور',
-  'return': 'عودة',
+  'login_with_email' : 'تسجيل الدخول بالبريد الإلكتروني',
+  'return' : 'رجوع'
 };

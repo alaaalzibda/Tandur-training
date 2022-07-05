@@ -125,9 +125,11 @@ class DefaultTextStyles {
   CommonTextModel h4MediumStyleWhite() => h4MediumStyle().copyWith(
         fontColor: AppColors.white,
       );
+
   CommonTextModel h3MediumStylePrimary() => h3MediumStyle().copyWith(
         fontColor: AppColors.primary,
       );
+
   CommonTextModel h5MediumStyleWhite() => h5MediumStyle().copyWith(
         fontColor: AppColors.white,
       );
@@ -181,6 +183,7 @@ class DefaultTextStyles {
         fontSize: fontH5,
         fontColor: AppColors.grey,
       );
+
   CommonTextModel h5MediumStyle() => mediumTextStyle.copyWith(
         fontSize: fontH4,
         fontColor: AppColors.primary,
