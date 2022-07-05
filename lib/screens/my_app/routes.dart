@@ -1,5 +1,5 @@
 import '../../general_exports.dart';
-import '../auth/signin_screen.dart';
+import '../my_plant_list/my_plant_list.dart';
 
 List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<HomeBottomBar>(
@@ -18,8 +18,12 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSignInScreen,
     page: () => const SignInScreen(),
   ),
-  GetPage<SignupScreen>(
-    name: routeSignUp,
-    page: () => const SignupScreen(),
+  // GetPage<SignUpScreen>(
+  //   name: routeSignUp,
+  //   page: () => const SignUpScreen(),
+  // ),
+  GetPage<MyPlantScreen>(
+    name: routeMyPlant,
+    page: () => const MyPlantScreen(),
   ),
 ];

@@ -20,27 +20,24 @@ class DefaultTextInputStyles {
         backgroundColor: AppColors.grey,
       );
 
-  CommonTextInputModel textFieldInputStyle(
-    String hint,
-    String icon, {
-    bool? secure,
-  }) =>
+  CommonTextInputModel textFieldInputStyle(String hint, String icon,
+          {bool? secure, bool? borderEnable}) =>
       CommonTextInputModel(
         hint: hint.tr,
         hintColor: Color(AppColors.black),
         radius: 8,
+        withBorderSide: borderEnable ?? false,
         fontSize: fontH5,
         textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
-          containerStyle: CommonContainerModel(
-            paddingLeft: 0.01,
-            paddingRight: 0.005,
-            paddingVertical: 0.02,
-          ),
-          path: icon,
-          color: AppColors.blackLight,
-          iconDataSize: 18.0
-        ),
-        obscureText: secure ?? false,
+            containerStyle: CommonContainerModel(
+              paddingLeft: 0.01,
+              paddingRight: 0.005,
+              paddingVertical: 0.02,
+            ),
+            path: icon,
+            color: AppColors.blackLight,
+            iconDataSize: 18.0),
+        obscureText: secure ?? true,
       );
 }
