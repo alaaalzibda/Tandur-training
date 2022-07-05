@@ -6,6 +6,7 @@ class MyPlantScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> tabs = <String>['Planted', 'Already Harvested'];
     return SafeArea(
       child: Scaffold(
         // appBar:
@@ -14,10 +15,11 @@ class MyPlantScreen extends StatelessWidget {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.fromLTRB(
-                    DEVICE_WIDTH * 0.1,
-                    DEVICE_HEIGHT * 0.15,
-                    DEVICE_WIDTH * 0.65,
-                    DEVICE_HEIGHT * 0.01),
+                  DEVICE_WIDTH * 0.1,
+                  DEVICE_HEIGHT * 0.15,
+                  DEVICE_WIDTH * 0.65,
+                  DEVICE_HEIGHT * 0.01,
+                ),
                 child: CommonText(
                   text: 'my_plant'.tr,
                   style: CommonTextModel(
@@ -44,6 +46,16 @@ class MyPlantScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              SliverOverlapAbsorber(
+                handle:
+                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                sliver: SliverAppBar(
+                  // forceElevated: innerBoxIsScrolled,
+                  bottom: TabBar(
+                    tabs: tabs.map((String name) => Tab(text: name)).toList(),
+                  ),
+                ),
+              )
             ],
           ),
         ),
