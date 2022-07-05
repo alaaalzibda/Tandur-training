@@ -35,8 +35,7 @@ class MyApp extends StatelessWidget {
       // we use the fallbackLocale to handel any error in language files and use the en as default language
       fallbackLocale: const Locale('en'),
       debugShowCheckedModeBanner: false,
-      initialRoute:
-          Get.find<MyAppController>().userData == null ? routeSignInScreen : routeHome,
+      initialRoute: Get.find<MyAppController>().userData == null ? routeSignUpForm : routeHome,
       getPages: appRoutes,
     );
   }
