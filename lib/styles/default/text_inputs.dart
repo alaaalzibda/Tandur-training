@@ -25,6 +25,7 @@ class DefaultTextInputStyles {
     String icon, {
     bool? secure,
     String? passwordWrong,
+    bool? checkPassword = false,
   }) =>
       CommonTextInputModel(
         hint: hint.tr,
@@ -47,7 +48,7 @@ class DefaultTextInputStyles {
             paddingRight: 0.048,
             height: 0.5,
           ),
-          path: passwordWrong ?? const IconData(0xe0005),
+          path: checkPassword! ? passwordWrong : const IconData(0xe0005),
           color: AppColors.red,
         ),
         obscureText: secure ?? false,

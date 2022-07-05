@@ -8,7 +8,7 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SignUpController>(
         init: SignUpController(),
-        builder: (_) {
+        builder: (SignUpController controller) {
           return SafeArea(
             child: Scaffold(
               backgroundColor: Color(AppColors.primary),
@@ -119,21 +119,15 @@ class SignUp extends StatelessWidget {
                           vertical: DEVICE_HEIGHT * 0.01),
                       child: Center(
                         child: CommonTextInput(
-                          textEditingController:
-                              Get.put(SignUpController()).passwordController,
+                          textEditingController: controller.passwordController,
                           onChanged: () {},
-                          style: Get.put(SignUpController()).isPasswordEmpty
-                              ? defaultTextInputStyles.textFieldInputStyle(
-                                  'enter_your_password',
-                                  iconPassword,
-                                  secure: true,
-                                  passwordWrong: iconsIcWarningPassword,
-                                )
-                              : defaultTextInputStyles.textFieldInputStyle(
-                                  'enter_your_password',
-                                  iconPassword,
-                                  secure: true,
-                                ),
+                          style: defaultTextInputStyles.textFieldInputStyle(
+                            'enter_your_password',
+                            iconPassword,
+                            secure: true,
+                            passwordWrong: iconsIcWarningPassword,
+                            checkPassword: controller.isPasswordEmpty,
+                          ),
                           containerStyle: defaultTextInputStyles
                               .descriptionContainerModel(),
                         ),
@@ -147,7 +141,7 @@ class SignUp extends StatelessWidget {
                       style:
                           defaultButtonStyles.fullWidthWhiteBorderButtonStyle(),
                       onPress: () {
-                        Get.put(SignUpController()).passwordEmpty();
+                        controller.passwordEmpty();
                       },
                     ),
                     MyCommonButton(
