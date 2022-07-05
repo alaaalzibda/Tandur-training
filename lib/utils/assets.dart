@@ -9,6 +9,7 @@ const String iconsIcCheck = '${iconsPath}ic_check.svg';
 const String iconsIcCross = '${iconsPath}ic_cross.svg';
 const String iconsIcDate = '${iconsPath}ic_date.svg';
 const String iconsIcEmail = '${iconsPath}ic_email.svg';
+const String iconsIcEmailSign = '${iconsPath}ic_email_sigin.svg';
 const String iconsIcHome = '${iconsPath}ic_home.svg';
 const String iconsIcHappy = '${iconsPath}ic_happy.svg';
 const String iconsIcHumidity = '${iconsPath}ic_humidity.svg';
@@ -25,7 +26,6 @@ const String iconsIcTemperature = '${iconsPath}ic_temperature.svg';
 const String iconsIcTime = '${iconsPath}ic_time.svg';
 const String iconsVector = '${iconsPath}Vector.svg';
 const String imagesTachyonLogo = '${iconsPath}tachyon_logo.png';
-const String iconEmail = '${iconsPath}ic_email.svg';
 const String iconWarningPassword = '${iconsPath}ic_warning_password.svg';
 
 const String iconPassword = '${iconsPath}ic_lock.svg';

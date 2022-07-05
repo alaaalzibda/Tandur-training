@@ -53,7 +53,7 @@ class SignUpFromScreen extends StatelessWidget {
                         child: CommonTextInput(
                           style: defaultTextInputStyles.textFieldInputStyle(
                             'enter_your_email',
-                            iconsIcEmail,
+                            iconsIcEmailSign,
                           ),
                           containerStyle: defaultTextInputStyles
                               .descriptionContainerModel(),
