@@ -122,7 +122,7 @@ class SignUp extends StatelessWidget {
                           textEditingController:
                               Get.put(SignUpController()).passwordController,
                           onChanged: () {},
-                          style: Get.put(SignUpController()).passwordEmpty()
+                          style: Get.put(SignUpController()).isPasswordEmpty
                               ? defaultTextInputStyles.textFieldInputStyle(
                                   'enter_your_password',
                                   iconPassword,
@@ -146,7 +146,9 @@ class SignUp extends StatelessWidget {
                       title: 'signUp'.tr,
                       style:
                           defaultButtonStyles.fullWidthWhiteBorderButtonStyle(),
-                      onPress: () {},
+                      onPress: () {
+                        Get.put(SignUpController()).passwordEmpty();
+                      },
                     ),
                     MyCommonButton(
                       title: 'return'.tr,

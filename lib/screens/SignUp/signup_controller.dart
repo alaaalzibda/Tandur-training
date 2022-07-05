@@ -4,12 +4,14 @@ import '../../general_exports.dart';
 
 class SignUpController extends GetxController {
   TextEditingController passwordController = TextEditingController();
-  String version = '';
+  bool isPasswordEmpty = false;
 
-  bool passwordEmpty() {
+  void passwordEmpty() {
     if (passwordController.value.text.isEmpty) {
-      return true;
+      isPasswordEmpty = true;
+    } else {
+      isPasswordEmpty = false;
     }
-    return false;
+    update();
   }
 }
