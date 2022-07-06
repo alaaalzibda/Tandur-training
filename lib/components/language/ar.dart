@@ -15,5 +15,7 @@ const Map<String, String> ar = <String, String>{
   'app_name': 'تطبيق تندور',
   'login_with_email': 'تسجيل الدخول بالبريد الإلكتروني',
   'return': 'رجوع',
-  'my_plant': 'نباتاتي'
+  'my_plant': 'نباتاتي',
+  'healthy_crops': 'نباتات جيدة',
+  'warning_crops': 'نباتات في خطر',
 };

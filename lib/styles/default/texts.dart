@@ -232,4 +232,50 @@ class DefaultTextStyles {
   CommonTextModel titleStyle() => h3MediumStyle().copyWith(
         fontColor: AppColors.black,
       );
+  CommonTextModel commonLeftTextStyle() => CommonTextModel(
+        fontSize: fontH2,
+        fontColor: AppColors.white,
+        fontWeight: FontWeight.bold,
+        prefixIcon: CommonIcon(
+          containerStyle: CommonContainerModel(
+            width: DEVICE_WIDTH * 0.00025,
+            height: DEVICE_HEIGHT * 0.0001,
+            paddingRight: 0.015,
+            paddingLeft: 0.045,
+          ),
+          path: iconsIcTandurLogo,
+          color: AppColors.white,
+        ),
+      );
+  CommonTextModel commonRightTextStyle(
+    String cropsStatus,
+  ) =>
+      CommonTextModel(
+        rowMainAxisAlignemnt: MainAxisAlignment.center,
+        fontSize: fontH6,
+        fontColor: AppColors.white,
+        height: DEVICE_HEIGHT * 0.0025,
+        prefixIcon: CommonIcon(
+          containerStyle: CommonContainerModel(
+            width: DEVICE_WIDTH * 0.00025,
+            height: DEVICE_HEIGHT * 0.00001,
+            paddingRight: 0.01,
+            paddingLeft: 0.025,
+          ),
+          path: selectIcon(cropsStatus),
+          color: AppColors.white,
+        ),
+      );
+}
+
+String selectIcon(String cropsStatus) {
+  if (cropsStatus == 'Healthy Plants     ') {
+    return iconsIcCheck;
+  } else if (cropsStatus == 'there is a warning ') {
+    return iconsIcFalse;
+  } else if (cropsStatus == 'satisfied Result   ' ||
+      cropsStatus == 'unsatisfied Result') {
+    return iconsIcHappy;
+  }
+  return iconsIcTime;
 }

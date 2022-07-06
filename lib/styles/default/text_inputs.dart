@@ -20,8 +20,12 @@ class DefaultTextInputStyles {
         backgroundColor: AppColors.grey,
       );
 
-  CommonTextInputModel textFieldInputStyle(String hint, String icon,
-          {bool? secure, bool? borderEnable}) =>
+  CommonTextInputModel textFieldInputStyle(
+    String hint,
+    String icon, {
+    bool? secure,
+    bool? borderEnable,
+  }) =>
       CommonTextInputModel(
         hint: hint.tr,
         hintColor: Color(AppColors.black),

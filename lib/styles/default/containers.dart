@@ -2,7 +2,7 @@ import '../../general_exports.dart';
 
 class DefaultContainerStyles {
   CommonContainerModel containerStyles = CommonContainerModel(
-    width: 1,
+    width: DEVICE_WIDTH,
     height: 0.95,
   );
   CommonContainerModel defaultButtonContainer = CommonContainerModel(
@@ -27,11 +27,14 @@ class DefaultContainerStyles {
   );
 
   CommonContainerModel bottomSheetContainer() => CommonContainerModel(
-        paddingHorizontal: 0.05,
-        backgroundColor: AppColors.white,
+        paddingHorizontal: DEVICE_WIDTH * 0.1,
+        backgroundImage: const DecorationImage(
+          image: AssetImage(imageItemBackground),
+        ),
+        backgroundColor: AppColors.black,
         topLeftRadius: 0.05,
         topRightRadius: 0.05,
-        width: 1,
+        width: 50,
         marginTop: 0.1,
       );
 
@@ -43,4 +46,12 @@ class DefaultContainerStyles {
     paddingHorizontal: 0.07,
     paddingVertical: 0.03,
   );
+
+  CommonContainerModel commonTapBarContainer() => CommonContainerModel(
+      borderColor: AppColors.primary,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(imageItemBackground),
+        ),
+      ));
 }
