@@ -1,13 +1,13 @@
 import '../../../general_exports.dart';
 
-class SignUpFromScreen extends StatelessWidget {
-  const SignUpFromScreen({Key? key}) : super(key: key);
+class SignUpFormScreen extends StatelessWidget {
+  const SignUpFormScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<SignUpController>(
-        init: SignUpController(),
-        builder: (SignUpController controller) {
+    return GetBuilder<SignUpFormController>(
+        init: SignUpFormController(),
+        builder: (SignUpFormController controller) {
           return SafeArea(
             child: Scaffold(
               backgroundColor: Color(AppColors.primary),
