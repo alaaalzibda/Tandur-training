@@ -13,8 +13,16 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSplash,
     page: () => const SplashScreen(),
   ),
-  GetPage<SignUpFromScreen>(
+  GetPage<SignUpFormScreen>(
     name: routeSignUpForm,
-    page: () => const SignUpFromScreen(),
+    page: () => const SignUpFormScreen(),
+  ),
+  GetPage<SignupScreen>(
+    name: routeSignUp,
+    page: () => const SignupScreen(),
+  ),
+  GetPage<SignInScreen>(
+    name: routeSignIn,
+    page: () => const SignInScreen(),
   ),
 ];

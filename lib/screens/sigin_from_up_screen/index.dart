@@ -1,2 +1,2 @@
-export './signup_controller.dart';
-export './signup_screen.dart';
+export './signup_form_controller.dart';
+export './signup_form_screen.dart';

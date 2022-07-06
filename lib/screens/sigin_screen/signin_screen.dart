@@ -36,14 +36,14 @@ class SignInScreen extends StatelessWidget {
                 _formTextInput(
                     title: 'email'.tr,
                     textKey: 'enter_your_email',
-                    path: iconsIcEmail),
+                    path: iconsIcEmailSign,),
                 _mySpace(
                   height: 0.02,
                 ),
                 _formTextInput(
                     title: 'password'.tr,
                     textKey: 'enter_your_password',
-                    path: iconsIcPassword),
+                    path: iconPassword,),
                 SizedBox(
                   height: DEVICE_HEIGHT * 0.07,
                 ),
@@ -59,7 +59,8 @@ class SignInScreen extends StatelessWidget {
                   width: DEVICE_WIDTH,
                   child: MyCommonButton(
                       title: 'return'.tr,
-                      style: defaultButtonStyles.defaultButtonStyle()),
+                      style: defaultButtonStyles.defaultButtonStyle(),
+                  ),
                 )
               ],
             ),

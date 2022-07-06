@@ -1,5 +1,5 @@
 import '../../general_exports.dart';
 
-class SignInController extends GetxController {
+class SignInController extends GetxController{
 
 }

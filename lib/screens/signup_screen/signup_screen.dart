@@ -36,14 +36,14 @@ class SignupScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: CommonText(
-                    text: 'Email',
+                    text: 'email'.tr,
                     style: defaultTextStyles.h4StyleWhite(),
                   ),
                 ),
                 CommonTextInput(
                   style: defaultTextInputStyles.textFieldInputStyle(
-                    'enter_your_email',
-                    iconsIcEmail,
+                    'enter_your_email'.tr,
+                    iconsIcEmailSign,
                     secure: true,
                   ),
                   containerStyle:
