@@ -1,4 +1,5 @@
 import '../../general_exports.dart';
+import '../profile_screen/profile_screen.dart';
 
 List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<HomeBottomBar>(
@@ -24,5 +25,9 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<SignInScreen>(
     name: routeSignIn,
     page: () => const SignInScreen(),
+  ),
+  GetPage<Profile>(
+    name: routeProfile,
+    page: () => const Profile(),
   ),
 ];

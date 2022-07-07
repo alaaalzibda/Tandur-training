@@ -4,9 +4,10 @@ const Map<String, String> en = <String, String>{
   'app_name': 'Tandur App',
   'login': 'Login',
   'lets_farm': "Let's Farm!",
-  'description_sign_up': 'Now you can plant in your place without fear of crop failure again',
-  'join_now' : 'Join Now',
-  'enter' : 'Enter',
+  'description_sign_up':
+      'Now you can plant in your place without fear of crop failure again',
+  'join_now': 'Join Now',
+  'enter': 'Enter',
   'enter_your_email': 'Enter your Email',
   'enter_your_password': 'Enter your password',
   'search': 'Search',
@@ -19,4 +20,8 @@ const Map<String, String> en = <String, String>{
   'full_name': 'Full Name',
   'email': 'Email',
   'confirm_your_password': 'Confirm Password',
+  'your_full_name': 'Your Full Name',
+  'name': 'Mr. Ryan',
+  'active_plant': 'Number Of Active Plant',
+  'satisfaction_rate': 'Harvest Satisfaction Rate',
 };
