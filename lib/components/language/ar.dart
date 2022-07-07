@@ -18,4 +18,11 @@ const Map<String, String> ar = <String, String>{
   'my_plant': 'نباتاتي',
   'healthy_crops': 'نباتات جيدة',
   'warning_crops': 'نباتات في خطر',
+  'satisfied_result': 'نتائج مرضية',
+  'unsatisfied_result': 'نتائج غير مرضية',
+  'harvested_time': 'حصد من 4 أشهر',
+  'time_to_harvest': ' وقت الحصاد بعد شهرين',
+  'chili': 'تشيلي',
+  'planted': 'مزروعات',
+  'harvested': 'تم حصاده',
 };

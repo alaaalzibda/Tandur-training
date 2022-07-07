@@ -7,12 +7,13 @@ class MyPlantScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String healthyCrops = 'Healthy Plants     ';
-    const String warningCrops = 'there is a warning ';
-    const String timeToHarvest = '2 month to harvest';
-    const String satisfiedResult = 'satisfied Result   ';
-    const String unsatisfiedResult = 'unsatisfied Result';
-    const String harvestedTime = 'harvested 4 month ';
+    final String healthyCrops = 'healthy_crops'.tr;
+    final String warningCrops = 'warning_crops'.tr;
+    final String timeToHarvest = 'time_to_harvest'.tr;
+    final String satisfiedResult = 'satisfied_result'.tr;
+    final String unsatisfiedResult = 'unsatisfied_result'.tr;
+    final String harvestedTime = 'harvested_time'.tr;
+    final String cityName = 'chili'.tr;
     return GetBuilder<MyControllerList>(
         init: MyControllerList(),
         builder: (MyControllerList controller) {
@@ -50,7 +51,7 @@ class MyPlantScreen extends StatelessWidget {
                               child: CommonTextInput(
                                 style:
                                     defaultTextInputStyles.textFieldInputStyle(
-                                  'search',
+                                  'search'.tr,
                                   iconsIcSearch,
                                   borderEnable: false,
                                 ),
@@ -72,9 +73,9 @@ class MyPlantScreen extends StatelessWidget {
                       //     EdgeInsets.symmetric(horizontal: DEVICE_WIDTH ),
                       tabs: <Widget>[
                         Tab(
-                          text: 'Planted'.tr,
+                          text: 'planted'.tr,
                         ),
-                        Tab(text: 'Already Harvested'.tr),
+                        Tab(text: 'harvested'.tr),
                       ],
                     ),
                     SizedBox(
@@ -106,7 +107,7 @@ class MyPlantScreen extends StatelessWidget {
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: CommonText(
-                                            text: 'Chili',
+                                            text: cityName,
                                             style: defaultTextStyles
                                                 .commonLeftTextStyle(),
                                           ),
@@ -122,7 +123,7 @@ class MyPlantScreen extends StatelessWidget {
                                                       healthyCrops),
                                             ),
                                             CommonText(
-                                              text: warningCrops,
+                                              text: timeToHarvest,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       timeToHarvest),
@@ -153,7 +154,7 @@ class MyPlantScreen extends StatelessWidget {
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: CommonText(
-                                            text: 'Chili',
+                                            text: cityName,
                                             style: defaultTextStyles
                                                 .commonLeftTextStyle(),
                                           ),
@@ -163,13 +164,13 @@ class MyPlantScreen extends StatelessWidget {
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             CommonText(
-                                              text: healthyCrops,
+                                              text: warningCrops,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       warningCrops),
                                             ),
                                             CommonText(
-                                              text: warningCrops,
+                                              text: timeToHarvest,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       timeToHarvest),
@@ -200,13 +201,11 @@ class MyPlantScreen extends StatelessWidget {
                                   ),
                                   Positioned(
                                     child: Row(
-                                      // mainAxisAlignment:
-                                      // MainAxisAlignment.spaceBetwe,
                                       children: <Widget>[
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: CommonText(
-                                            text: 'Chili',
+                                            text: cityName,
                                             style: defaultTextStyles
                                                 .commonLeftTextStyle(),
                                           ),
@@ -216,13 +215,13 @@ class MyPlantScreen extends StatelessWidget {
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             CommonText(
-                                              text: healthyCrops,
+                                              text: satisfiedResult,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       satisfiedResult),
                                             ),
                                             CommonText(
-                                              text: warningCrops,
+                                              text: harvestedTime,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       harvestedTime),
@@ -253,7 +252,7 @@ class MyPlantScreen extends StatelessWidget {
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: CommonText(
-                                            text: 'Chili',
+                                            text: cityName,
                                             style: defaultTextStyles
                                                 .commonLeftTextStyle(),
                                           ),
@@ -263,13 +262,13 @@ class MyPlantScreen extends StatelessWidget {
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             CommonText(
-                                              text: healthyCrops,
+                                              text: unsatisfiedResult,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       unsatisfiedResult),
                                             ),
                                             CommonText(
-                                              text: warningCrops,
+                                              text: harvestedTime,
                                               style: defaultTextStyles
                                                   .commonRightTextStyle(
                                                       harvestedTime),

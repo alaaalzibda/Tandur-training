@@ -269,12 +269,12 @@ class DefaultTextStyles {
 }
 
 String selectIcon(String cropsStatus) {
-  if (cropsStatus == 'Healthy Plants     ') {
+  if (cropsStatus == 'healthy_crops'.tr) {
     return iconsIcCheck;
-  } else if (cropsStatus == 'there is a warning ') {
+  } else if (cropsStatus == 'warning_crops'.tr) {
     return iconsIcFalse;
-  } else if (cropsStatus == 'satisfied Result   ' ||
-      cropsStatus == 'unsatisfied Result') {
+  } else if (cropsStatus == 'satisfied_result'.tr ||
+      cropsStatus == 'unsatisfied_result'.tr) {
     return iconsIcHappy;
   }
   return iconsIcTime;

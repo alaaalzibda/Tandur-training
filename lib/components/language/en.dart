@@ -15,5 +15,14 @@ const Map<String, String> en = <String, String>{
   'login_with_email': 'Login with Email',
   'password': 'Password',
   'return': 'Return',
-  'my_plant': 'My Plant'
+  'my_plant': 'My Plant',
+  'healthy_crops': 'Healthy Plants     ',
+  'warning_crops': 'Warning Crops     ',
+  'satisfied_result': 'satisfied Result     ',
+  'unsatisfied_result': 'unsatisfied Result ',
+  'harvested_time': 'Harvested 4 Month ',
+  'time_to_harvest': '2 month to harvest',
+  'chili': 'Chili',
+  'planted': 'Planted',
+  'harvested': 'Harvested',
 };
