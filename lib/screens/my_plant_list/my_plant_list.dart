@@ -17,69 +17,69 @@ class MyPlantScreen extends StatelessWidget {
     return GetBuilder<MyControllerList>(
         init: MyControllerList(),
         builder: (MyControllerList controller) {
-          return SafeArea(
-            child: DefaultTabController(
-              length: 2,
-              child: Scaffold(
-                body: Column(
+          return DefaultTabController(
+            length: 2,
+            child: Scaffold(
+              body: SingleChildScrollView(
+                child: Column(
                   children: <Widget>[
-                    SingleChildScrollView(
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(
-                              DEVICE_WIDTH * 0.12,
-                              DEVICE_HEIGHT * 0.15,
-                              DEVICE_WIDTH * 0.65,
-                              DEVICE_HEIGHT * 0.01,
-                            ),
-                            child: CommonText(
-                              text: 'my_plant'.tr,
-                              style: CommonTextModel(
-                                textAlign: TextAlign.left,
-                                fontSize: fontH2,
-                                fontWeight: FontWeight.bold,
-                                fontColor: AppColors.blackLight,
-                              ),
+                    Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(
+                            DEVICE_WIDTH * 0.12,
+                            DEVICE_HEIGHT * 0.1,
+                            DEVICE_WIDTH * 0.65,
+                            DEVICE_HEIGHT * 0.01,
+                          ),
+                          child: CommonText(
+                            text: 'my_plant'.tr,
+                            style: CommonTextModel(
+                              textAlign: TextAlign.left,
+                              fontSize: fontH2,
+                              fontWeight: FontWeight.bold,
+                              fontColor: AppColors.blackLight,
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: DEVICE_WIDTH * 0.1,
-                                vertical: DEVICE_HEIGHT * 0.03),
-                            child: Center(
-                              child: CommonTextInput(
-                                style:
-                                    defaultTextInputStyles.textFieldInputStyle(
-                                  'search'.tr,
-                                  iconsIcSearch,
-                                  borderEnable: false,
-                                ),
-                                containerStyle: defaultTextInputStyles
-                                    .descriptionContainerModel(),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: DEVICE_WIDTH * 0.1,
+                              vertical: DEVICE_HEIGHT * 0.025),
+                          child: Center(
+                            child: CommonTextInput(
+                              style: defaultTextInputStyles.textFieldInputStyle(
+                                'search'.tr,
+                                iconsIcSearch,
+                                borderEnable: false,
                               ),
+                              containerStyle: defaultTextInputStyles
+                                  .descriptionContainerModel(),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                     TabBar(
                       controller: controller.myTapController,
                       labelColor: Color(AppColors.primary),
-                      padding: EdgeInsets.only(right: DEVICE_WIDTH * 0.5),
+                      padding: EdgeInsets.only(
+                        right: DEVICE_WIDTH * 0.5,
+                        left: DEVICE_WIDTH * 0.05,
+                      ),
                       unselectedLabelColor: Color(AppColors.blackLight),
                       indicatorColor: Color(AppColors.primary),
-                      // labelPadding:
-                      //     EdgeInsets.symmetric(horizontal: DEVICE_WIDTH ),
                       tabs: <Widget>[
                         Tab(
                           text: 'planted'.tr,
                         ),
-                        Tab(text: 'harvested'.tr),
+                        Tab(
+                          text: 'harvested'.tr,
+                        ),
                       ],
                     ),
                     SizedBox(
-                      height: DEVICE_HEIGHT * 0.25,
+                      height: DEVICE_HEIGHT * 0.55,
                       width: DEVICE_WIDTH * 0.8,
                       child: TabBarView(
                         controller: controller.myTapController,
@@ -87,198 +87,40 @@ class MyPlantScreen extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              Stack(
-                                alignment: AlignmentDirectional.centerEnd,
-                                children: <Widget>[
-                                  Image.asset(
-                                    imageItemBackground,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Image.asset(
-                                    imageItemShadow,
-                                    height: DEVICE_HEIGHT * 0.09,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Positioned(
-                                    child: Row(
-                                      // mainAxisAlignment:
-                                      // MainAxisAlignment.spaceBetwe,
-                                      children: <Widget>[
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: CommonText(
-                                            text: cityName,
-                                            style: defaultTextStyles
-                                                .commonLeftTextStyle(),
-                                          ),
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            CommonText(
-                                              text: healthyCrops,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      healthyCrops),
-                                            ),
-                                            CommonText(
-                                              text: timeToHarvest,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      timeToHarvest),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                              plantInfo(cityName, healthyCrops, timeToHarvest),
+                              plantInfo(cityName, warningCrops, timeToHarvest),
+                              SizedBox(
+                                height: DEVICE_HEIGHT * 0.2,
                               ),
-                              Stack(
-                                alignment: AlignmentDirectional.bottomEnd,
-                                children: <Widget>[
-                                  Image.asset(
-                                    imageItemBackground,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Image.asset(
-                                    imageItemShadow,
-                                    height: DEVICE_HEIGHT * 0.09,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Positioned(
-                                    child: Row(
-                                      //mainAxisAlignment: MainAxisAlignment.end,
-                                      children: <Widget>[
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: CommonText(
-                                            text: cityName,
-                                            style: defaultTextStyles
-                                                .commonLeftTextStyle(),
-                                          ),
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            CommonText(
-                                              text: warningCrops,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      warningCrops),
-                                            ),
-                                            CommonText(
-                                              text: timeToHarvest,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      timeToHarvest),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: MyCommonButton(
+                                  title: 'plant'.tr,
+                                  path: iconsIcTandurLogo,
+                                  style:
+                                      defaultButtonStyles.whiteBorderButton(),
+                                ),
                               ),
                             ],
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              Stack(
-                                alignment: AlignmentDirectional.centerEnd,
-                                children: <Widget>[
-                                  Image.asset(
-                                    imageItemBackground,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Image.asset(
-                                    imageItemShadow,
-                                    height: DEVICE_HEIGHT * 0.09,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Positioned(
-                                    child: Row(
-                                      children: <Widget>[
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: CommonText(
-                                            text: cityName,
-                                            style: defaultTextStyles
-                                                .commonLeftTextStyle(),
-                                          ),
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            CommonText(
-                                              text: satisfiedResult,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      satisfiedResult),
-                                            ),
-                                            CommonText(
-                                              text: harvestedTime,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      harvestedTime),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                              plantInfo(
+                                  cityName, satisfiedResult, harvestedTime),
+                              plantInfo(
+                                  cityName, unsatisfiedResult, harvestedTime),
+                              SizedBox(
+                                height: DEVICE_HEIGHT * 0.2,
                               ),
-                              Stack(
-                                alignment: AlignmentDirectional.bottomEnd,
-                                children: <Widget>[
-                                  Image.asset(
-                                    imageItemBackground,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Image.asset(
-                                    imageItemShadow,
-                                    height: DEVICE_HEIGHT * 0.09,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  Positioned(
-                                    child: Row(
-                                      //mainAxisAlignment: MainAxisAlignment.end,
-                                      children: <Widget>[
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: CommonText(
-                                            text: cityName,
-                                            style: defaultTextStyles
-                                                .commonLeftTextStyle(),
-                                          ),
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            CommonText(
-                                              text: unsatisfiedResult,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      unsatisfiedResult),
-                                            ),
-                                            CommonText(
-                                              text: harvestedTime,
-                                              style: defaultTextStyles
-                                                  .commonRightTextStyle(
-                                                      harvestedTime),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: MyCommonButton(
+                                  title: 'plant'.tr,
+                                  path: iconsIcTandurLogo,
+                                  style:
+                                      defaultButtonStyles.whiteBorderButton(),
+                                ),
                               ),
                             ],
                           ),
@@ -291,5 +133,72 @@ class MyPlantScreen extends StatelessWidget {
             ),
           );
         });
+  }
+
+  Widget plantInfo(String cityName, String cropsStatus, String harvestTime) {
+    // ignore: prefer_final_locals
+    return GetBuilder<MyControllerList>(builder: (MyControllerList controller) {
+      return InkWell(
+        onTap: () {
+          controller.tap();
+        },
+        onTapCancel: () {
+          controller.tap();
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: controller.isSelected
+                  ? Color(AppColors.red)
+                  : Color(AppColors.primary),
+              width: 3,
+            ),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Stack(
+            alignment: AlignmentDirectional.bottomEnd,
+            children: <Widget>[
+              Image.asset(
+                imageItemBackground,
+                fit: BoxFit.fill,
+              ),
+              Image.asset(
+                imageItemShadow,
+                height: DEVICE_HEIGHT * 0.09,
+                fit: BoxFit.fill,
+              ),
+              Positioned(
+                child: Row(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: CommonText(
+                        text: cityName,
+                        style: defaultTextStyles.commonLeftTextStyle(),
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        CommonText(
+                          text: cropsStatus,
+                          style: defaultTextStyles
+                              .commonRightTextStyle(cropsStatus),
+                        ),
+                        CommonText(
+                          text: harvestTime,
+                          style: defaultTextStyles
+                              .commonRightTextStyle(harvestTime),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    });
   }
 }

@@ -25,4 +25,5 @@ const Map<String, String> ar = <String, String>{
   'chili': 'تشيلي',
   'planted': 'مزروعات',
   'harvested': 'تم حصاده',
+  'plant': 'نباتات',
 };

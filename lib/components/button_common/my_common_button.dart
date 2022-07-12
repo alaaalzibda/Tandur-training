@@ -30,7 +30,7 @@ class MyCommonButton extends StatelessWidget {
           fontColor: AppColors.white,
           fontWeight: FontWeight.w600,
         ),
-        rightChild: path != null
+        leftChild: path != null
             ? Padding(
                 padding: EdgeInsets.only(
                   right: DEVICE_WIDTH * 0.02,
@@ -38,7 +38,7 @@ class MyCommonButton extends StatelessWidget {
                 child: SvgPicture.asset(
                   path!,
                   width: DEVICE_WIDTH * 0.064,
-                  height: DEVICE_WIDTH * 0.029,
+                  height: DEVICE_WIDTH * 0.05,
                   color: Color(AppColors.white),
                 ),
               )

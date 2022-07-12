@@ -25,4 +25,5 @@ const Map<String, String> en = <String, String>{
   'chili': 'Chili',
   'planted': 'Planted',
   'harvested': 'Harvested',
+  'plant': 'Plant',
 };

@@ -42,6 +42,6 @@ class DefaultTextInputStyles {
             path: icon,
             color: AppColors.blackLight,
             iconDataSize: 18.0),
-        obscureText: secure ?? true,
+        obscureText: secure ?? false,
       );
 }

@@ -27,9 +27,8 @@ class HomeBottomBar extends StatelessWidget {
                           height: 0.08,
                           width: 1,
                           borderTopWidth: 1,
-                          borderTopColor: AppColors.red,
+                          borderColor: AppColors.grey,
                           paddingHorizontal: 0.07,
-                          backgroundColor: AppColors.greyDark,
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,8 +57,8 @@ class HomeBottomBar extends StatelessWidget {
                                             height: DEVICE_HEIGHT * 0.025,
                                             color: Color(
                                               index == controller.selectedIndex
-                                                  ? AppColors.red
-                                                  : AppColors.grey,
+                                                  ? AppColors.primary
+                                                  : AppColors.blackLight,
                                             ),
                                           ),
                                           CommonText(
@@ -70,8 +69,8 @@ class HomeBottomBar extends StatelessWidget {
                                                   fontColor: index ==
                                                           controller
                                                               .selectedIndex
-                                                      ? AppColors.red
-                                                      : AppColors.grey,
+                                                      ? AppColors.primary
+                                                      : AppColors.blackLight,
                                                 ),
                                             containerStyle:
                                                 CommonContainerModel(
@@ -92,7 +91,6 @@ class HomeBottomBar extends StatelessWidget {
                                               height: 0.005,
                                               width: 0.03,
                                               borderRadius: 0.01,
-                                              backgroundColor: AppColors.red,
                                             ),
                                           ),
                                         ),
