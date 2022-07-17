@@ -1,5 +1,4 @@
 import '../../general_exports.dart';
-import '../auth/signin_screen.dart';
 
 List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
   GetPage<HomeBottomBar>(
@@ -14,13 +13,17 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeSplash,
     page: () => const SplashScreen(),
   ),
-  GetPage<SignInScreen>(
-    name: routeSignInScreen,
-    page: () => const SignInScreen(),
+  GetPage<SignUpFormScreen>(
+    name: routeSignUpForm,
+    page: () => const SignUpFormScreen(),
   ),
   GetPage<SignupScreen>(
     name: routeSignUp,
     page: () => const SignupScreen(),
+  ),
+  GetPage<SignInScreen>(
+    name: routeSignIn,
+    page: () => const SignInScreen(),
   ),
   GetPage<DetailsScreen>(
     name: routeDetails,
