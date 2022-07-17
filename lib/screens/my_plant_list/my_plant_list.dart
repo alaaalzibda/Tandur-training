@@ -45,8 +45,9 @@ class MyPlantScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.symmetric(
-                              horizontal: DEVICE_WIDTH * 0.1,
-                              vertical: DEVICE_HEIGHT * 0.025),
+                            horizontal: DEVICE_WIDTH * 0.1,
+                            vertical: DEVICE_HEIGHT * 0.025,
+                          ),
                           child: Center(
                             child: CommonTextInput(
                               style: defaultTextInputStyles.textFieldInputStyle(

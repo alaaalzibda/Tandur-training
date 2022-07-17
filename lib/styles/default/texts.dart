@@ -232,6 +232,7 @@ class DefaultTextStyles {
   CommonTextModel titleStyle() => h3MediumStyle().copyWith(
         fontColor: AppColors.black,
       );
+
   CommonTextModel commonLeftTextStyle() => CommonTextModel(
         fontSize: fontH2,
         fontColor: AppColors.white,
@@ -266,16 +267,4 @@ class DefaultTextStyles {
           color: AppColors.white,
         ),
       );
-}
-
-String selectIcon(String cropsStatus) {
-  if (cropsStatus == 'healthy_crops'.tr) {
-    return iconsIcCheck;
-  } else if (cropsStatus == 'warning_crops'.tr) {
-    return iconsIcFalse;
-  } else if (cropsStatus == 'satisfied_result'.tr ||
-      cropsStatus == 'unsatisfied_result'.tr) {
-    return iconsIcHappy;
-  }
-  return iconsIcTime;
 }
