@@ -1,3 +1,4 @@
+import '../../components/plant_info/plant_info.dart';
 import '../../general_exports.dart';
 import 'my_controller_list.dart';
 // import 'input_text.dart';
@@ -13,7 +14,7 @@ class MyPlantScreen extends StatelessWidget {
     final String satisfiedResult = 'satisfied_result'.tr;
     final String unsatisfiedResult = 'unsatisfied_result'.tr;
     final String harvestedTime = 'harvested_time'.tr;
-    final String cityName = 'chili'.tr;
+    final String plantName = 'chili'.tr;
     return GetBuilder<MyControllerList>(
         init: MyControllerList(),
         builder: (MyControllerList controller) {
@@ -87,8 +88,16 @@ class MyPlantScreen extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              plantInfo(cityName, healthyCrops, timeToHarvest),
-                              plantInfo(cityName, warningCrops, timeToHarvest),
+                              PlantsInfo(
+                                plantName: plantName,
+                                cropsStatus: healthyCrops,
+                                harvestTime: timeToHarvest,
+                              ),
+                              PlantsInfo(
+                                plantName: plantName,
+                                cropsStatus: warningCrops,
+                                harvestTime: timeToHarvest,
+                              ),
                               SizedBox(
                                 height: DEVICE_HEIGHT * 0.2,
                               ),
@@ -106,10 +115,16 @@ class MyPlantScreen extends StatelessWidget {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              plantInfo(
-                                  cityName, satisfiedResult, harvestedTime),
-                              plantInfo(
-                                  cityName, unsatisfiedResult, harvestedTime),
+                              PlantsInfo(
+                                plantName: plantName,
+                                cropsStatus: satisfiedResult,
+                                harvestTime: harvestedTime,
+                              ),
+                              PlantsInfo(
+                                plantName: plantName,
+                                cropsStatus: unsatisfiedResult,
+                                harvestTime: harvestedTime,
+                              ),
                               SizedBox(
                                 height: DEVICE_HEIGHT * 0.2,
                               ),
@@ -135,70 +150,13 @@ class MyPlantScreen extends StatelessWidget {
         });
   }
 
-  Widget plantInfo(String cityName, String cropsStatus, String harvestTime) {
-    // ignore: prefer_final_locals
-    return GetBuilder<MyControllerList>(builder: (MyControllerList controller) {
-      return InkWell(
-        onTap: () {
-          controller.tap();
-        },
-        onTapCancel: () {
-          controller.tap();
-        },
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: controller.isSelected
-                  ? Color(AppColors.red)
-                  : Color(AppColors.primary),
-              width: 3,
-            ),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Stack(
-            alignment: AlignmentDirectional.bottomEnd,
-            children: <Widget>[
-              Image.asset(
-                imageItemBackground,
-                fit: BoxFit.fill,
-              ),
-              Image.asset(
-                imageItemShadow,
-                height: DEVICE_HEIGHT * 0.09,
-                fit: BoxFit.fill,
-              ),
-              Positioned(
-                child: Row(
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: CommonText(
-                        text: cityName,
-                        style: defaultTextStyles.commonLeftTextStyle(),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        CommonText(
-                          text: cropsStatus,
-                          style: defaultTextStyles
-                              .commonRightTextStyle(cropsStatus),
-                        ),
-                        CommonText(
-                          text: harvestTime,
-                          style: defaultTextStyles
-                              .commonRightTextStyle(harvestTime),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-    });
-  }
+  // Widget plantInfo(String plantName, String cropsStatus, String harvestTime) {
+  //   return GetBuilder<MyControllerList>(builder: (MyControllerList controller) {
+  //     return InkWell(
+  //       onTap: () {
+  //         controller.tap();
+  //       },
+  //       onTapCancel: () {
+  //         controller.tap();
+  //       },
 }
