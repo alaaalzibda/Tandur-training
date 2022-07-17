@@ -149,14 +149,4 @@ class MyPlantScreen extends StatelessWidget {
           );
         });
   }
-
-  // Widget plantInfo(String plantName, String cropsStatus, String harvestTime) {
-  //   return GetBuilder<MyControllerList>(builder: (MyControllerList controller) {
-  //     return InkWell(
-  //       onTap: () {
-  //         controller.tap();
-  //       },
-  //       onTapCancel: () {
-  //         controller.tap();
-  //       },
 }

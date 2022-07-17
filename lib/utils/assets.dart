@@ -37,5 +37,5 @@ const String imagesPath = 'assets/images/';
 const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
 const String imageEmailSubmitLogo = '${imagesPath}ic_email_submit_logo.png';
 const String imageLoginLogo = '${imagesPath}ic_login_logo.png';
-const String imageItemBackground = '${imagesPath}item_image.png';
+const String imageItemBackground = '${imagesPath}item_image4.png';
 const String imageItemShadow = '${imagesPath}Rectangle 4.png';
