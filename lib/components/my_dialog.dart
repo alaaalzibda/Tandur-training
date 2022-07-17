@@ -10,26 +10,34 @@ class MyDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: CommonText(
-          text: 'title_dialog'.tr, style: appTextStyles.h4StyleBlack()),
+        text: 'title_dialog'.tr,
+        style: appTextStyles.h4StyleBlack(),
+      ),
       content: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           itemAction(
             iconsIcSad,
             'not_enough'.tr,
-            color: Color(AppColors.red),
+            color: Color(
+              AppColors.red,
+            ),
             style: appTextStyles.h5StyleRed(),
           ),
           itemAction(
             iconsIcNeutral,
             'normal'.tr,
-            color: Color(AppColors.primary),
+            color: Color(
+              AppColors.primary,
+            ),
             style: appTextStyles.h5StylePrimary(),
           ),
           itemAction(
             iconsIcHappy,
             'satisfied'.tr,
-            color: Color(AppColors.primary),
+            color: Color(
+              AppColors.primary,
+            ),
             style: appTextStyles.h5StylePrimary(),
           ),
         ],
@@ -41,7 +49,9 @@ class MyDialog extends StatelessWidget {
             children: [
               MyCommonButton(
                 title: 'done'.tr,
-                style: defaultButtonStyles.defaultButtonStyle(backgroundColor: AppColors.brown),
+                style: defaultButtonStyles.defaultButtonStyle(
+                  backgroundColor: AppColors.brown,
+                ),
               ),
               SizedBox(
                 height: DEVICE_HEIGHT * 0.05,
@@ -53,19 +63,28 @@ class MyDialog extends StatelessWidget {
     );
   }
 
-  Widget itemDialogWidget(String path, String text,
-      {Color? color, CommonTextModel? style}) {
+  Widget itemDialogWidget(
+    String path,
+    String text, {
+    Color? color,
+    CommonTextModel? style,
+  }) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         SvgPicture.asset(
           path,
-          color: color ?? Color(AppColors.black),
+          color: color ??
+              Color(
+                AppColors.black,
+              ),
         ),
         SizedBox(
           height: DEVICE_HEIGHT * 0.01,
         ),
-        CommonText(text: text.tr, style: style ?? appTextStyles.h5StyleBlack())
+        CommonText(
+          text: text.tr,
+          style: style ?? appTextStyles.h5StyleBlack(),
+        ),
       ],
     );
   }
@@ -74,12 +93,21 @@ class MyDialog extends StatelessWidget {
       {Color? color, CommonTextModel? style}) {
     return GetBuilder<DialogController>(
         init: DialogController(),
-        builder: (controller) {
+        global: false,
+        builder: (DialogController controller) {
           return GestureDetector(
             onTap: () => controller.isSelected(),
-            child: controller.dialogController == true
-                ? itemDialogWidget(path, text)
-                : itemDialogWidget(path, text, color: color, style: style),
+            child: controller.dialogController
+                ? itemDialogWidget(
+                    path,
+                    text,
+                    color: color,
+                    style: style,
+                  )
+                : itemDialogWidget(
+                    path,
+                    text,
+                  ),
           );
         });
   }

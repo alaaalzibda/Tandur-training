@@ -5,12 +5,7 @@ class DialogController extends GetxController{
   bool dialogController = false;
 
   void isSelected() {
-      if(dialogController){
-        dialogController = false;
-      }
-      else {
-        dialogController = true;
-      }
+      dialogController = !dialogController;
       update();
   }
 }
