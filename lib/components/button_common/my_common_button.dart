@@ -30,7 +30,7 @@ class MyCommonButton extends StatelessWidget {
           fontColor: AppColors.white,
           fontWeight: FontWeight.w600,
         ),
-        rightChild: path != null
+        leftChild: path != null
             ? Padding(
                 padding: EdgeInsets.only(
                   right: DEVICE_WIDTH * 0.02,

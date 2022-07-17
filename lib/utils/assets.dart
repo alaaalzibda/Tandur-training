@@ -27,6 +27,7 @@ const String iconsIcTime = '${iconsPath}ic_time.svg';
 const String iconsVector = '${iconsPath}Vector.svg';
 const String imagesTachyonLogo = '${iconsPath}tachyon_logo.png';
 const String iconWarningPassword = '${iconsPath}ic_warning_password.svg';
+const String iconOptional = '${iconsPath}ic_optional.svg';
 
 const String iconPassword = '${iconsPath}ic_lock.svg';
 const String iconsIcWarningPassword = '${iconsPath}ic_warning_password.svg';
@@ -39,3 +40,6 @@ const String imageTachyonLogo = '${imagesPath}tachyon_logo.png';
 const String imageEmailSubmitLogo = '${imagesPath}ic_email_submit_logo.png';
 const String imageLoginLogo = '${imagesPath}ic_login_logo.png';
 const String iconSignUpLogo = '${imagesPath}ic_sign_up_logo.png';
+
+const String imageItemImage = '${imagesPath}item_image.png';
+const String imageRectangle = '${imagesPath}rectangle.png';

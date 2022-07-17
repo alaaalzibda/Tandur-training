@@ -7,7 +7,7 @@ class DefaultTextStyles {
 
   CommonTextModel mediumTextStyle = CommonTextModel(
     fontFamily: 'poppins',
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
   );
 
   CommonTextModel h1Style() => defaultTextStyle.copyWith(
@@ -52,11 +52,18 @@ class DefaultTextStyles {
 
   CommonTextModel h5StylePrimary() => h5Style().copyWith(
         fontColor: AppColors.primary,
-      );
+  );
+  CommonTextModel h5StyleRed() => h5Style().copyWith(
+        fontColor: AppColors.red,
+  );
 
   CommonTextModel h6StylePrimary() => h6Style().copyWith(
         fontColor: AppColors.primary,
       );
+  CommonTextModel h6StyleRed() => h6Style().copyWith(
+    fontColor: AppColors.red,
+  );
+
 
   CommonTextModel h1StyleBlack() => h1Style().copyWith(
         fontColor: AppColors.black,

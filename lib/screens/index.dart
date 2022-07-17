@@ -1,3 +1,4 @@
+export './details_screen/index.dart';
 export './home_bottom_bar/index.dart';
 export './sigin_from_up_screen/index.dart';
 export './sigin_screen/index.dart';

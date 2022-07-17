@@ -18,5 +18,16 @@ const Map<String, String> ar = <String, String>{
   'full_name': 'اسمك الكامل',
   'confirm_your_password': 'اكد كلمة المرور',
   'login_with_email' : 'تسجيل الدخول بالبريد الإلكتروني',
-  'return' : 'رجوع'
+  'return' : 'رجوع',
+  'related_information' : 'معلومات ذات صله',
+  'your_location' : 'موقعك (انقر لتغيير الموقع)',
+  'location_indonesia' : 'سيمبير ، مدينة كديري ، إندونيسيا',
+  'planters_near_you' : 'المزارعون بالقرب منك',
+  'harvest_duration' : 'مدة الحصاد',
+  'months_4-5' : '4-5 شهور',
+  'month_1' : 'الشهر 1',
+  'there_is_a_warning' : 'هناك تحذير',
+  'plant' : 'مصنع',
+  'in_Accordance' : 'في التوافق',
+  'it_is_not_in_accordance_with' : 'إنه لا يتوافق مع',
 };
