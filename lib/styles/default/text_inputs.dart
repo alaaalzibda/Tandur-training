@@ -43,5 +43,6 @@ class DefaultTextInputStyles {
             color: AppColors.blackLight,
             iconDataSize: 18.0),
         obscureText: secure ?? false,
+        obscuringCharacter: '*',
       );
 }
