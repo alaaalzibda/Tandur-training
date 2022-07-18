@@ -5,3 +5,4 @@ const String routeSignIn = '/sign-in-screen';
 const String routeSignUp = '/signup-screen';
 const String routeSignUpForm = '/signUp-form-screen';
 const String routeDetails = '/details-screen';
+const String routeMyPlant = '/my-plant-screen';

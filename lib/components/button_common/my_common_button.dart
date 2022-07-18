@@ -38,7 +38,7 @@ class MyCommonButton extends StatelessWidget {
                 child: SvgPicture.asset(
                   path!,
                   width: DEVICE_WIDTH * 0.064,
-                  height: DEVICE_WIDTH * 0.029,
+                  height: DEVICE_WIDTH * 0.05,
                   color: Color(AppColors.white),
                 ),
               )

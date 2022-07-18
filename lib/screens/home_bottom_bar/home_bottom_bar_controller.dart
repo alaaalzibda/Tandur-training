@@ -1,4 +1,5 @@
 import '../../general_exports.dart';
+import '../my_plant_list/my_plant_list.dart';
 
 class HomeBottomBarController extends GetxController {
   List<dynamic>? bottomBarItems = <dynamic>[
@@ -7,28 +8,19 @@ class HomeBottomBarController extends GetxController {
       widgetKey: CommonText(
         text: 'Home',
       ),
-      keyIcon: iconArrowRightSmall,
+      keyIcon: iconsIcHome,
     },
     <String, dynamic>{
-      titleKey: 'Home2',
-      widgetKey: CommonText(
-        text: 'Home2',
-      ),
-      keyIcon: iconArrowRightSmall,
+      titleKey: 'Plant',
+      widgetKey: const MyPlantScreen(),
+      keyIcon: iconsIcTandurLogo,
     },
     <String, dynamic>{
-      titleKey: 'Home3',
+      titleKey: 'Profile',
       widgetKey: CommonText(
-        text: 'Home3',
+        text: 'profile',
       ),
-      keyIcon: iconArrowRightSmall,
-    },
-    <String, dynamic>{
-      titleKey: 'Home4',
-      widgetKey: CommonText(
-        text: 'Home4',
-      ),
-      keyIcon: iconArrowRightSmall,
+      keyIcon: iconsIcPerson,
     },
   ];
   final AppLanguageController appLanguageController =

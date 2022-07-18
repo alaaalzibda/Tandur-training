@@ -29,4 +29,8 @@ List<GetPage<dynamic>> appRoutes = <GetPage<dynamic>>[
     name: routeDetails,
     page: () => const DetailsScreen(),
   ),
+  GetPage<MyPlantScreen>(
+    name: routeMyPlant,
+    page: () => const MyPlantScreen(),
+  ),
 ];
