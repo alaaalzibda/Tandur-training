@@ -25,6 +25,8 @@ class DefaultTextInputStyles {
     String icon, {
     bool? secure,
     bool? borderEnable,
+    String? passwordWrong,
+    bool? checkPassword = false,
   }) =>
       CommonTextInputModel(
         hint: hint.tr,
@@ -34,14 +36,24 @@ class DefaultTextInputStyles {
         fontSize: fontH5,
         textColor: AppColors.blackLight,
         prefixIcon: CommonIcon(
-            containerStyle: CommonContainerModel(
-              paddingLeft: 0.01,
-              paddingRight: 0.005,
-              paddingVertical: 0.02,
-            ),
-            path: icon,
-            color: AppColors.blackLight,
-            iconDataSize: 18.0),
+          containerStyle: CommonContainerModel(
+            paddingLeft: 0.01,
+            paddingRight: 0.005,
+            paddingVertical: 0.02,
+          ),
+          path: icon,
+          color: AppColors.blackLight,
+          iconDataSize: 18.0,
+        ),
+        suffixIcon: CommonIcon(
+          containerStyle: CommonContainerModel(
+            paddingLeft: 0.05,
+            paddingRight: 0.048,
+            height: 0.5,
+          ),
+          path: checkPassword! ? passwordWrong : const IconData(0xe0005),
+          color: AppColors.red,
+        ),
         obscureText: secure ?? false,
         obscuringCharacter: '*',
       );

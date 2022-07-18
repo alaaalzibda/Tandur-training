@@ -30,7 +30,7 @@ const Map<String, String> en = <String, String>{
   'month_2': 'month 2',
   'month_3': 'month 3',
   'there_is_a_warning': 'There is a warning',
-  'plant': 'plant',
+  'plant': 'Plant',
   'in_Accordance': 'In accordance',
   'it_is_not_in_accordance_with': 'It is not in accordance with',
   'my_plant': 'My Plant',
@@ -43,5 +43,4 @@ const Map<String, String> en = <String, String>{
   'chili': 'Chili',
   'planted': 'Planted',
   'harvested': 'Harvested',
-  'plant': 'Plant',
 };

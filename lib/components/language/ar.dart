@@ -27,11 +27,9 @@ const Map<String, String> ar = <String, String>{
   'months_4-5' : '4-5 شهور',
   'month_1' : 'الشهر 1',
   'there_is_a_warning' : 'هناك تحذير',
-  'plant' : 'مصنع',
+  'plant': 'نباتات',
   'in_Accordance' : 'في التوافق',
   'it_is_not_in_accordance_with' : 'إنه لا يتوافق مع',
-  'login_with_email': 'تسجيل الدخول بالبريد الإلكتروني',
-  'return': 'رجوع',
   'my_plant': 'نباتاتي',
   'healthy_crops': 'نباتات جيدة',
   'warning_crops': 'نباتات في خطر',
@@ -42,5 +40,5 @@ const Map<String, String> ar = <String, String>{
   'chili': 'تشيلي',
   'planted': 'مزروعات',
   'harvested': 'تم حصاده',
-  'plant': 'نباتات',
+
 };
