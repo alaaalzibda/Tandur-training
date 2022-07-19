@@ -33,4 +33,9 @@ const Map<String, String> en = <String, String>{
   'plant': 'plant',
   'in_Accordance': 'In accordance',
   'it_is_not_in_accordance_with': 'It is not in accordance with',
+  'title_dialog': 'How is the Harvest This Time?',
+  'satisfied': 'Satisfied',
+  'normal': 'Normal',
+  'not_enough': 'Not enough',
+  'done': 'Done',
 };

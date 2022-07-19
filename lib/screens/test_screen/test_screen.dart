@@ -62,11 +62,12 @@ class TestScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              MyDialog(),
               Center(
                 child: Column(
                   children: <Widget>[
                     SizedBox(
-                      height: DEVICE_HEIGHT * 0.1,
+                      height: DEVICE_HEIGHT * 0.01,
                     ),
                     MyCommonButton(
                       title: 'login'.tr,

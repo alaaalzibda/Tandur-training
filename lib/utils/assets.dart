@@ -11,7 +11,6 @@ const String iconsIcDate = '${iconsPath}ic_date.svg';
 const String iconsIcEmail = '${iconsPath}ic_email.svg';
 const String iconsIcEmailSign = '${iconsPath}ic_email_sigin.svg';
 const String iconsIcHome = '${iconsPath}ic_home.svg';
-const String iconsIcHappy = '${iconsPath}ic_happy.svg';
 const String iconsIcHumidity = '${iconsPath}ic_humidity.svg';
 const String iconsIcLocation = '${iconsPath}ic_location.svg';
 const String iconsIcLogout = '${iconsPath}ic_logout.svg';
@@ -31,6 +30,10 @@ const String iconOptional = '${iconsPath}ic_optional.svg';
 
 const String iconPassword = '${iconsPath}ic_lock.svg';
 const String iconsIcWarningPassword = '${iconsPath}ic_warning_password.svg';
+
+const String iconsIcHappy = '${iconsPath}ic_happy.svg';
+const String iconsIcSad = '${iconsPath}ic_sad.svg';
+const String iconsIcNeutral = '${iconsPath}ic_neutral.svg';
 // ----------------------------------------
 
 const String imagesPath = 'assets/images/';
