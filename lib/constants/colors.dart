@@ -12,5 +12,6 @@ class AppColors {
   static int green = 0xff40ECA5;
   static int greenLight = 0xffEAF1EB;
   static int greyValve = 0xff92A1B1;
+  static int brown  = 0xff936E4C;
   static int transparent = 0x00FFFFFF;
 }

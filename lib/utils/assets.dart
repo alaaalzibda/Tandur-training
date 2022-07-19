@@ -31,6 +31,8 @@ const String iconOptional = '${iconsPath}ic_optional.svg';
 
 const String iconPassword = '${iconsPath}ic_lock.svg';
 const String iconsIcWarningPassword = '${iconsPath}ic_warning_password.svg';
+const String iconsIcSad = '${iconsPath}ic_sad.svg';
+const String iconsIcNeutral = '${iconsPath}ic_neutral.svg';
 // ----------------------------------------
 
 const String imagesPath = 'assets/images/';
