@@ -1,10 +1,9 @@
 import 'package:flutter_svg/svg.dart';
 
-import '../general_exports.dart';
-import '../utils/controllers/dialog_controller.dart';
+import '../../general_exports.dart';
 
 class MyDialog extends StatelessWidget {
-  MyDialog({Key? key}) : super(key: key);
+  const MyDialog({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
