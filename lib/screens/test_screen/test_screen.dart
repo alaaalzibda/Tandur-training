@@ -96,6 +96,13 @@ class TestScreen extends StatelessWidget {
                         consoleLog('onPress');
                       },
                     ),
+                                        const Center(
+                      child: (
+                        plantName: 'paddy',
+                        image: imageItemBackground1,
+                        shadow: imageItemShadow1,
+                      ),
+                    ),
                   ],
                 ),
               ),
