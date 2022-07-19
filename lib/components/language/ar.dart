@@ -30,9 +30,4 @@ const Map<String, String> ar = <String, String>{
   'plant' : 'مصنع',
   'in_Accordance' : 'في التوافق',
   'it_is_not_in_accordance_with' : 'إنه لا يتوافق مع',
-  'title_dialog' : 'كيف هو الحصاد هذه المرة؟',
-  'satisfied': 'راضي',
-  'normal': 'عادي',
-  'not_enough': 'لا يكفي',
-  'Done': 'تم',
 };

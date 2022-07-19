@@ -1,7 +1,4 @@
-import 'package:flutter_svg/svg.dart';
-
 import '../../components/button_common/my_common_button.dart';
-import '../../components/my_dialog.dart';
 import '../../components/text_input/my_text_input.dart';
 import '../../general_exports.dart';
 // import 'input_text.dart';
@@ -65,12 +62,11 @@ class TestScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              MyDialog(),
               Center(
                 child: Column(
                   children: <Widget>[
                     SizedBox(
-                      height: DEVICE_HEIGHT * 0.01,
+                      height: DEVICE_HEIGHT * 0.1,
                     ),
                     MyCommonButton(
                       title: 'login'.tr,
